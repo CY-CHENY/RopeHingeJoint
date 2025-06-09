@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071c45be5289dc4cb05be70d81c7c0e, type: 3}
+  m_Name: ModelColor_2
+  m_EditorClassIdentifier: 
+  nameColor:
+  - <Name>k__BackingField: group2_1_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group2_1_2
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group2_2_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group2_2_2
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group2_3_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group2_3_2
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group2_4_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group2_4_2
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group2_5_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group2_5_2
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group2_6_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group2_6_2
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group4_1_1
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: group4_1_2
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group4_1_3
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group4_2_1
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group4_2_2
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: group4_2_3
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group4_3_1
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group4_3_2
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group5_1_1
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: group5_1_2
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: polySurface31
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: polySurface58
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group5_3_1
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group5_3_2
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group5_4_1
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group5_4_2
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group_3_1_1
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group_3_1_2
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group_3_2_1
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group_3_2_2
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: group_3_3_1
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group_3_3_2
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: group_3_4_1
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group_3_4_2
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group_3_5_1
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group_3_5_2
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder7
+    <Color>k__BackingField: 3

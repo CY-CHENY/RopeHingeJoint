@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Effects
+  m_EditorClassIdentifier: 
+  m_GroupName: Effects
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 6ebca3c3798d12b408f50b9eec3b0cef
+  m_SerializeEntries:
+  - m_GUID: 288fc057c366ba54d828983f1262879b
+    m_Address: baofa
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c51b501ee1791954495bb385eacd3168
+    m_Address: xingxing
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 756966029ba79d149b6119fa3e245c28
+    m_Address: Assets/GameResources/Effect/xingxing_tuowei.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e55e8459d13053e4f8242e99d1a7365d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e4d52fdeb8a91ef4f81d29b7723c797f, type: 2}
+    - {fileID: 11400000, guid: 8eb8bbafa63438542ad44e56b7a27646, type: 2}

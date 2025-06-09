@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "age": 11,
+    "name": "aaa",
+    "score": 9
+  },
+  {
+    "id": 2,
+    "age": 22,
+    "name": "bbb",
+    "score": 99
+  },
+  {
+    "id": 3,
+    "age": 33,
+    "name": "ccc",
+    "score": 999
+  }
+]

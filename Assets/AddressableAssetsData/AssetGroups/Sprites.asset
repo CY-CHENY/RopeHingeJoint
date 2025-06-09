@@ -1,0 +1,345 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Sprites
+  m_EditorClassIdentifier: 
+  m_GroupName: Sprites
+  m_Data:
+    m_SerializedData: []
+  m_GUID: fb3f7d1d072926348bcf2faba76a9e41
+  m_SerializeEntries:
+  - m_GUID: ce210b829bd66d34a945e4b4b1a579aa
+    m_Address: Assets/GameResources/Sprites/Box/Yellow.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1881e1e2331f7a740ab923b87da56c86
+    m_Address: Assets/GameResources/Sprites/Box/Unlock.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d68360b2b3abdc4c9369c240a9430c1
+    m_Address: Assets/GameResources/Sprites/Box/Violet.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d8cbe6346f44fe44b6f98a509aa2f26
+    m_Address: Assets/GameResources/Sprites/Box/Blue.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: daea9a73139f89f479dd09e9e1eb366e
+    m_Address: Assets/GameResources/Sprites/Box/Orange.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2bef8f5f6b09fc46bc7c05a58f91b02
+    m_Address: Assets/GameResources/Sprites/Box/Green.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c2bfcf7713a589429c8ced9b2c2bcb3
+    m_Address: Assets/GameResources/Sprites/Box/Cyan.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db9180588e1ddbf4a8dc2c36472c0a10
+    m_Address: Assets/GameResources/Sprites/Box/Red.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e847e46d2e20ec40a11b84d827738a5
+    m_Address: Assets/GameResources/Sprites/Box/Black.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e91afc2603b7c140a8fc7692b9a0584
+    m_Address: Assets/GameResources/Sprites/Box/White1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9b14b89444ded34d81b44ac8b28ca86
+    m_Address: Assets/GameResources/Sprites/Box/diguang.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26952299bec824e45928a75203558664
+    m_Address: Assets/GameResources/Sprites/Box/White.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba3657ec4a25fe140955db69ab9234c1
+    m_Address: Assets/GameResources/Sprites/Box/Super.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4b3d8201d5ab0f4096582cdc9330ca5
+    m_Address: Assets/GameResources/Sprites/Box/Blue1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1c950a477627c341a81d8e14a37dce3
+    m_Address: Assets/GameResources/Sprites/Box/Cyan1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d0bedb3d845dc54198dfbc73e6ad4a1
+    m_Address: Assets/GameResources/Sprites/Box/Green1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 397bc207057eb914ca2af96583220a9e
+    m_Address: Assets/GameResources/Sprites/Box/Orange1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74c47dbb798e529499684a159d150a81
+    m_Address: Assets/GameResources/Sprites/Box/Red1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e924e4c85b55082408d1be605d3cb34f
+    m_Address: Assets/GameResources/Sprites/Box/Violet1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b89e8c55ae95e8c41ac56a4f9d43a571
+    m_Address: Assets/GameResources/Sprites/Box/Yellow1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6572f9c5480e4240b0523766492a902
+    m_Address: d1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b355a508fe0b4d146933c0730c6389f7
+    m_Address: d2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c30054fa83806a145ba73c2da819d90a
+    m_Address: j1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6cdc199fe509b8d41a56a390410119aa
+    m_Address: j2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e083ea5b1790f864baee0fec76a01e46
+    m_Address: l1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b79d913c8aa1a24296ba748ac9631bd
+    m_Address: l2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9b57ee447bde85499bd16139212f2da
+    m_Address: s1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4824a57408267f3438a1a622afe7bb42
+    m_Address: s2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b05db88156d89d46bc77d8b2955f277
+    m_Address: y1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 85082c5b8d430104abd1c297215b7010
+    m_Address: y2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9dd4f2cc7d6d4b6429ccf5951486606d
+    m_Address: Assets/GameResources/Sprites/Box/Black1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d96182586eb1eeb4286b7a66237c5034
+    m_Address: level1G
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 919310db692d54646909a5e8f4664676
+    m_Address: level1N
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ce3ec7400978ef4483ed756f5d75a1a
+    m_Address: level2G
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d59fbf502b3016c4ebd5e5d4155bfac0
+    m_Address: level2N
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24b1009508d23f345aea94a1c6b37d3a
+    m_Address: level3G
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c090ac153bcc62449a182d60a7455afc
+    m_Address: level3N
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7cde25fedb61fd4198a94aa9fc607fc
+    m_Address: level4G
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da6b481256973904dbdd490d08f782b1
+    m_Address: level4N
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1737af9e9cd3d1c419e5a9009b57b966
+    m_Address: level5G
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3304f3f2b4494c8478d2818487dfbce1
+    m_Address: level5N
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 350dfa30c70dfcb4db3b3697b3982068
+    m_Address: item1000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92d0168386697a443a9dc2c617f09c3e
+    m_Address: item1001
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 15452ec75c7fcee4b886315e40dbad62
+    m_Address: item1002
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89893c3bc90f5044ba8050ddc582a645
+    m_Address: hmg1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e696d69c0d31804c85b33860122fa09
+    m_Address: hmg2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae5906080020faf4bbc482c339e798ea
+    m_Address: hx1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5bb46cf580c9ca94b8f8e2820ec29a53
+    m_Address: hx2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54f7b491f7cedb64782543ddecde0891
+    m_Address: kc1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dfac2ca42eeaefe4ba500c7a6548ebed
+    m_Address: kc2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 322be92c6ba809c45b733ec2d0d5db4e
+    m_Address: pt1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4717d990113451429495fd5ce29aee9
+    m_Address: pt2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c496c23864f5fdc4c986e234cc3dcc53
+    m_Address: ss1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e23f00bb1f9e704db550304251d7ff0
+    m_Address: ss2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ebb3a93ca330b9147816c8e5b6684d8c
+    m_Address: level6G
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30a03a108d246984fb82cb7869bd5aeb
+    m_Address: level6N
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76075af7c805f3d4881204539e63560c
+    m_Address: level7G
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 353853291e19c474897ac78caa90ec77
+    m_Address: level7N
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9491fd76e80092b4da9abc86eaf58ddf
+    m_Address: level8G
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50fef28b99e3ef44bb172183d52f2959
+    m_Address: level8N
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 528a371b67f64384091af6615c56dd66
+    m_Address: level9G
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ee87e1781f70a94393e96b36e782903
+    m_Address: level9N
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d634593bdbae0024eba570c9dd525c15
+    m_Address: level10G
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4db71d0add0cde42882e985b9d87e1d
+    m_Address: level10N
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e55e8459d13053e4f8242e99d1a7365d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 082fb416ed4b7b14f8a58fb8c69ba451, type: 2}
+    - {fileID: 11400000, guid: ccd4f77f4650d2d44bc02c02bf2ca1c4, type: 2}

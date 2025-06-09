@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: LubanJson
+  m_EditorClassIdentifier: 
+  m_GroupName: LubanJson
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 623b209d71faed747b6da1ac0bff5055
+  m_SerializeEntries:
+  - m_GUID: ee7b185d8b59b3a46b0c45e9b2550d86
+    m_Address: tbplayer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 246517e20a288ba4bb885660795422e6
+    m_Address: tbtest
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43b1069f4cfc8a64c823ea6b04e762b2
+    m_Address: tbtesta
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c99d1fdf97cace045899a75f7b516166
+    m_Address: tbtestenum
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e55e8459d13053e4f8242e99d1a7365d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 342a355152f593342a85b662002f1766, type: 2}
+    - {fileID: 11400000, guid: 29cc319d82cfd644eaaea0d2d6e84e1d, type: 2}

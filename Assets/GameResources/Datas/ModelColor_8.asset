@@ -1,0 +1,273 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5071c45be5289dc4cb05be70d81c7c0e, type: 3}
+  m_Name: ModelColor_8
+  m_EditorClassIdentifier: 
+  nameColor:
+  - <Name>k__BackingField: pCylinder15
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pCylinder33
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pCylinder16
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pCylinder41
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: pCylinder17
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pCylinder39
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder18
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pCylinder38
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pCylinder19
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pCylinder34
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: pCylinder20
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pCylinder40
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: pCylinder21
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pCylinder37
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: pCylinder22
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pCylinder35
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder23
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pSphere2
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: pSphere24
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: pSphere4
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: pSphere25
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: pSphere26
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group4_1_1
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group4_1_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group4_2_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group4_2_2
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group4_3_1
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group4_3_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group4_4_1
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group4_4_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group4_5_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group4_5_2
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group5_1_1
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group5_1_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group5_2_1
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group5_2_2
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group5_3_1
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group5_3_2
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group5_4_1
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group5_4_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group5_5_1
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group5_5_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group5_6_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group5_6_2
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group6_1_1
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group6_1_2
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group6_2_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group6_2_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group6_3_1
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group6_3_2
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group6_4_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group6_4_2
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group6_5_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group6_5_2
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group6_6_1
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group6_6_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group6_7_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group6_7_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group7_1_1
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group7_1_2
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: group7_2_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group7_2_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group7_3_1
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group7_3_2
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: group7_4_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group7_4_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group7_5_1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group7_5_2
+    <Color>k__BackingField: 1
+  - <Name>k__BackingField: group7_6_1
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group7_6_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group8_1_1
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group8_1_2
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group8_2_1
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group8_2_2
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: group8_3_1
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group8_3_2
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group8_4_1
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group8_4_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group8_5_1
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group8_5_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group8_6_1
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group8_6_2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group9_1_1
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group9_1_2
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group9_2_1
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group9_2_2
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group9_3_1
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group9_3_2
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: group9_4_1
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group9_4_2
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group9_5_1
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: group9_5_2
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: group9_6_1
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group9_6_2
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: group9_7_1
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: group9_7_2
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: pCylinder2
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: pCylinder9
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder14
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pCylinder24
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder25
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder26
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder27
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder28
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder29
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder30
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder31
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: pCylinder32
+    <Color>k__BackingField: 5
+  - <Name>k__BackingField: pCylinder42
+    <Color>k__BackingField: 4
+  - <Name>k__BackingField: polySurface1
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: polySurface3
+    <Color>k__BackingField: 7
+  - <Name>k__BackingField: polySurface5
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: polySurface7
+    <Color>k__BackingField: 7
+  - <Name>k__BackingField: polySurface29
+    <Color>k__BackingField: 7
+  - <Name>k__BackingField: polySurface32
+    <Color>k__BackingField: 7
+  - <Name>k__BackingField: polySurface33
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: polySurface39
+    <Color>k__BackingField: 7
+  - <Name>k__BackingField: polySurface47
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: polySurface49
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: polySurface52
+    <Color>k__BackingField: 7
+  - <Name>k__BackingField: polySurface55
+    <Color>k__BackingField: 6
+  - <Name>k__BackingField: polySurface57
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: polySurface63
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: polySurface65
+    <Color>k__BackingField: 0
+  - <Name>k__BackingField: polySurface67
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: polySurface69
+    <Color>k__BackingField: 2
+  - <Name>k__BackingField: pSphere1
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: pSphere3
+    <Color>k__BackingField: 3
+  - <Name>k__BackingField: pSphere5
+    <Color>k__BackingField: 3

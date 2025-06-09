@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UIPage
+  m_EditorClassIdentifier: 
+  m_GroupName: UIPage
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 25a551772696bb5428e4a5a156b8abf8
+  m_SerializeEntries:
+  - m_GUID: 9f0a662445b18d341b5ed9f0bab7b321
+    m_Address: Assets/GameResources/Prefabs/UIPage/GameLoseUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b94bbf8104ca824387b5007f7074382
+    m_Address: Assets/GameResources/Prefabs/UIPage/DownloadResUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20a9132b4a5de4e459e6016564330e35
+    m_Address: Assets/GameResources/Prefabs/UIPage/CommonTipUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36441cdb191b6f347ad49ade4ca7c7b6
+    m_Address: Assets/GameResources/Prefabs/UIPage/GetRewardUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97f382d5c60c64b4088037647f1630d0
+    m_Address: Assets/GameResources/Prefabs/UIPage/GameUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6459b5c753a18e4baaa3306a84f17f3
+    m_Address: Assets/GameResources/Prefabs/UIPage/GuideUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d93ba4b25d4a264183ac04bbc59d243
+    m_Address: Assets/GameResources/Prefabs/UIPage/MainUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0aaea8f767d8d1f4ea82729d5c9323df
+    m_Address: Assets/GameResources/Prefabs/UIPage/MainRankingUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b123070923ca01c44943fb9f99ba3d85
+    m_Address: Assets/GameResources/Prefabs/UIPage/GameWinUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fea38a40fdd67e4cb67c6573aac148d
+    m_Address: Assets/GameResources/Prefabs/UIPage/FuHuoUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c24ec2b7008a26948bfa6e26137e8e17
+    m_Address: Assets/GameResources/Prefabs/UIPage/FeedbackUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42fb443258bf2594fbe2a79eb4bb4bfc
+    m_Address: Assets/GameResources/Prefabs/UIPage/CollectGamesUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2eca4940bcd767643bdce6d2ddf0ab24
+    m_Address: Assets/GameResources/Prefabs/UIPage/PlayerInfoUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9426346c46e05734ab89593471ee6391
+    m_Address: Assets/GameResources/Prefabs/UIPage/SettingsUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 995b28f959876314c94e65cca7da6a2a
+    m_Address: Assets/GameResources/Prefabs/UIPage/SignInUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48e26a279c781ad49a509a4402385fdb
+    m_Address: Assets/GameResources/Prefabs/UIPage/SelectAreaUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eb0e071757a0c104bb4181ca63e9b0d5
+    m_Address: Assets/GameResources/Prefabs/UIPage/RankingListUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e55e8459d13053e4f8242e99d1a7365d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: de8079d0348f0f3428d442c396ed749b, type: 2}
+    - {fileID: 11400000, guid: 69deb358d1ca8054abf692496612bb72, type: 2}

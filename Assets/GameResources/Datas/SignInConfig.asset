@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab09a64119df1042be64ae81a191725, type: 3}
+  m_Name: SignInConfig
+  m_EditorClassIdentifier: 
+  SignIn:
+  - Id: 1
+    Type: 1000;1
+  - Id: 2
+    Type: 1001;1
+  - Id: 3
+    Type: 1002;1
+  - Id: 4
+    Type: 1000;2
+  - Id: 5
+    Type: 1001;2
+  - Id: 6
+    Type: 1002;2
+  - Id: 7
+    Type: 1000;5|1001;5|1002;5

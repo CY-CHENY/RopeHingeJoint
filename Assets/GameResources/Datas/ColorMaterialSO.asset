@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618f30b3c03aac64ab3d540d7a1d021d, type: 3}
+  m_Name: ColorMaterialSO
+  m_EditorClassIdentifier: 
+  materialDatas:
+  - <ID>k__BackingField: 0
+    <material>k__BackingField: {fileID: 2100000, guid: 21493c55ea5aabf43bc8804f5f65e96b,
+      type: 2}
+  - <ID>k__BackingField: 1
+    <material>k__BackingField: {fileID: 2100000, guid: 4df64653d3724454982647fbb72b35f9,
+      type: 2}
+  - <ID>k__BackingField: 2
+    <material>k__BackingField: {fileID: 2100000, guid: 99f3de47aae3cf84eab45a3c73f5d954,
+      type: 2}
+  - <ID>k__BackingField: 3
+    <material>k__BackingField: {fileID: 2100000, guid: 6112189100bdf0d458a91fa553d33fd3,
+      type: 2}
+  - <ID>k__BackingField: 4
+    <material>k__BackingField: {fileID: 2100000, guid: fabf42383cac5774c8cad4268b003c38,
+      type: 2}
+  - <ID>k__BackingField: 5
+    <material>k__BackingField: {fileID: 2100000, guid: 0db37f34044566c45aef83000242cdef,
+      type: 2}
+  - <ID>k__BackingField: 6
+    <material>k__BackingField: {fileID: 2100000, guid: a6bb6cbaf32ed82448bc5bdf507d7b2c,
+      type: 2}

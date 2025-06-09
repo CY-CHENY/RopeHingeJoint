@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe35a22b85a896499b897cea184a674, type: 3}
+  m_Name: LegoDataSO
+  m_EditorClassIdentifier: 
+  legoDatas:
+  - <Name>k__BackingField: "\u82B1"
+    <Level>k__BackingField: 1
+    <Prefab>k__BackingField: {fileID: 919132149155446097, guid: 17393ff707870a4439b824b49d747f30,
+      type: 3}
+    <IconSource>k__BackingField: {fileID: 21300000, guid: fb0dfae8a9717af4fa2adc69dd46aa3c,
+      type: 3}
+    <IconSourceGray>k__BackingField: {fileID: 21300000, guid: bddd820963e3967479dd5feaac89ff82,
+      type: 3}
+    <CollectIconSource>k__BackingField: {fileID: 21300000, guid: 919310db692d54646909a5e8f4664676,
+      type: 3}
+    <CollectIconSourceGray>k__BackingField: {fileID: 21300000, guid: d96182586eb1eeb4286b7a66237c5034,
+      type: 3}
+  - <Name>k__BackingField: "\u77FF\u77F3"
+    <Level>k__BackingField: 2
+    <Prefab>k__BackingField: {fileID: 919132149155446097, guid: 0a36d8599f329334bba6fbf8c0d29cec,
+      type: 3}
+    <IconSource>k__BackingField: {fileID: 21300000, guid: f0836abd3d0d7fe488d871814e0183e6,
+      type: 3}
+    <IconSourceGray>k__BackingField: {fileID: 21300000, guid: 45792d9b1fb5d8c4393b74cc4af8bd9a,
+      type: 3}
+    <CollectIconSource>k__BackingField: {fileID: 21300000, guid: d59fbf502b3016c4ebd5e5d4155bfac0,
+      type: 3}
+    <CollectIconSourceGray>k__BackingField: {fileID: 21300000, guid: 4ce3ec7400978ef4483ed756f5d75a1a,
+      type: 3}
+  - <Name>k__BackingField: "\u9CC4\u9C7C"
+    <Level>k__BackingField: 3
+    <Prefab>k__BackingField: {fileID: 919132149155446097, guid: f3bc2f00582ebec4d986bd98a3070fd6,
+      type: 3}
+    <IconSource>k__BackingField: {fileID: 21300000, guid: 64bb08778360e8043b88670d9ac34ac4,
+      type: 3}
+    <IconSourceGray>k__BackingField: {fileID: 21300000, guid: dc58c54ef60e7e5419eaf41f30cf247f,
+      type: 3}
+    <CollectIconSource>k__BackingField: {fileID: 21300000, guid: c090ac153bcc62449a182d60a7455afc,
+      type: 3}
+    <CollectIconSourceGray>k__BackingField: {fileID: 21300000, guid: 24b1009508d23f345aea94a1c6b37d3a,
+      type: 3}
+  - <Name>k__BackingField: "\u6C7D\u8F66"
+    <Level>k__BackingField: 4
+    <Prefab>k__BackingField: {fileID: 919132149155446097, guid: fa1977fc090b1d04bae807a47455fe15,
+      type: 3}
+    <IconSource>k__BackingField: {fileID: 21300000, guid: 63199febe48a5a748a87b9dd6dae7c51,
+      type: 3}
+    <IconSourceGray>k__BackingField: {fileID: 21300000, guid: 1496bff59166897439b645af1387a8f4,
+      type: 3}
+    <CollectIconSource>k__BackingField: {fileID: 21300000, guid: da6b481256973904dbdd490d08f782b1,
+      type: 3}
+    <CollectIconSourceGray>k__BackingField: {fileID: 21300000, guid: b7cde25fedb61fd4198a94aa9fc607fc,
+      type: 3}
+  - <Name>k__BackingField: "\u57CE\u5821"
+    <Level>k__BackingField: 5
+    <Prefab>k__BackingField: {fileID: 919132149155446097, guid: a0160bd80f17fa44ea228bd14bfdb882,
+      type: 3}
+    <IconSource>k__BackingField: {fileID: 21300000, guid: 9f5dd6f6d25818649a177c091e740636,
+      type: 3}
+    <IconSourceGray>k__BackingField: {fileID: 21300000, guid: 4d970ad13cdde2643b60894a33f81f26,
+      type: 3}
+    <CollectIconSource>k__BackingField: {fileID: 21300000, guid: 3304f3f2b4494c8478d2818487dfbce1,
+      type: 3}
+    <CollectIconSourceGray>k__BackingField: {fileID: 21300000, guid: 1737af9e9cd3d1c419e5a9009b57b966,
+      type: 3}
