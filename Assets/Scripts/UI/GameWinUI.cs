@@ -33,7 +33,7 @@ public class GameWinUI : MonoBehaviour, IController
         int level = this.GetModel<RuntimeModel>().CurrentLevel.Value;
         var data = this.GetModel<RuntimeModel>().LevelLegoData[level];
 
-        var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(data.iconPath);
+        var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(data.IconPath);
         if (obj.Status == AsyncOperationStatus.Succeeded)
         {
             Icon.sprite = obj.Result.Instantiate();

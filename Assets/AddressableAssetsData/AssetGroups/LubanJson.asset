@@ -41,6 +41,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e0e015d6072fea448a3ff555bdd985f
+    m_Address: tblevelconfig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e55e8459d13053e4f8242e99d1a7365d, type: 2}
   m_SchemaSet:

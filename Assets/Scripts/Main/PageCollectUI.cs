@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using cfg;
 using QFramework;
 using UnityEngine;
 using UnityEngine.UI;
@@ -35,9 +36,9 @@ public class PageCollectUI : MonoBehaviour,IController
     }
     void CreateList()
     {
-        
-        var legoData = Util.LevelConfigs;
-        int rowCount = legoData.Count;
+
+        var legoData = ConfigSystem.GetTable().TbLevelConfig;
+        int rowCount = legoData.DataList.Count;
         var rowCnt = (rowCount/scrollList.RowItemCount) + (rowCount%scrollList.RowItemCount== 0?0:1);
         data.Clear();
         

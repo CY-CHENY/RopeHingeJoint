@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using cfg;
 using QFramework;
 using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -38,7 +39,7 @@ public class CollectViewItems : RecyclingListViewItem, IController
         go.SetActive(false);
         if (model.CurrentLevel.Value > legoData.Level)
         {
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(legoData.iconCollectPath);
+            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(legoData.IconCollectPath);
             if (obj.Status == AsyncOperationStatus.Succeeded)
             {
                 img_icon.sprite = obj.Result;
@@ -50,7 +51,7 @@ public class CollectViewItems : RecyclingListViewItem, IController
         }
         else
         {
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(legoData.iconCollectGrayPath);
+            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(legoData.IconCollectGrayPath);
             if (obj.Status == AsyncOperationStatus.Succeeded)
             {
                 img_icon.sprite = obj.Result;

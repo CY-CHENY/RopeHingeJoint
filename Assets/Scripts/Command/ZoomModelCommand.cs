@@ -1,5 +1,6 @@
 using QFramework;
 using UnityEngine;
+using DG.Tweening;
 public class ZoomModelCommand : AbstractCommand
 {
     private bool zoomIn;
@@ -10,20 +11,17 @@ public class ZoomModelCommand : AbstractCommand
 
     protected override void OnExecute()
     {
-        var model = this.GetModel<ScaleModel>();
-
+        Camera modelCamera = GameObject.FindWithTag("ModelCamera").GetComponent<Camera>();
 
         if (zoomIn)
         {
-            var newScale = model.Scale.Value + 0.1f;
-
-            model.Scale.Value = Mathf.Min(newScale, 1.3f);
+            var newScale = modelCamera.orthographicSize - 1f;
+            modelCamera.DOOrthoSize(Mathf.Max(newScale, 2f),0.3f);
         }
         else
         {
-            var newScale = model.Scale.Value - 0.1f;
-
-            model.Scale.Value = Mathf.Max(newScale, 0.6f);
+            var newScale = modelCamera.orthographicSize + 1f;
+            modelCamera.DOOrthoSize(Mathf.Min(newScale, 8f),0.3f);
         }
     }
 }

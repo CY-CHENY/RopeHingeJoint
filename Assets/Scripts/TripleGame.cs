@@ -23,7 +23,7 @@ public class TripleGame : Architecture<TripleGame>
 
         RegisterModel(new SignInModel());
         RegisterModel(new RotationModel());
-        RegisterModel(new ScaleModel());
+        RegisterModel(new CameraSizeModel());
         RegisterModel(new RuntimeModel());
         RegisterModel(new MainRankingModel());
         RegisterModel<ISettingsModel>(new SettingModel());

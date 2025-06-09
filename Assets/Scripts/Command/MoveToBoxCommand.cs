@@ -51,8 +51,16 @@ public class MoveToBoxCommand : AbstractCommand
         var dissolve = wool.AddComponent<DissolveController>();
         dissolve.InitCtl();
         yield return null;
+        
+        Camera mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        Camera modelCamera = GameObject.FindWithTag("ModelCamera").GetComponent<Camera>();
+        Vector3 screenPos1 = modelCamera.WorldToScreenPoint(wool.transform.position);
+        // 将屏幕位置转回世界坐标，但使用renderCamera
+        Vector3 worldPos1 = mainCamera.ScreenToWorldPoint(
+            new Vector3(screenPos1.x, screenPos1.y, mainCamera.nearClipPlane + 1));
+
         //从模型到盒子
-        var start = wool.transform.position;
+        var start = worldPos1;//wool.transform.position;
         var end = new Vector3(wood.transform.position.x, wood.transform.position.y, wood.transform.position.z - 0.5f);
         //先从起点附近延长到终点
         Vector3 dir = end - start;

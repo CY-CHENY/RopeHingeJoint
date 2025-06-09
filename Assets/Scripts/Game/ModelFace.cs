@@ -15,12 +15,18 @@ public class ModelFace : BaseController
             if(modelRope!=null) modelRope.AddToModelFace(this);
         }
     }
+
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Finish"))
+        {
+            Destroy(gameObject);
+        }
+    }
     
-    
-    
-    
-    
-    public void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Finish"))
         {

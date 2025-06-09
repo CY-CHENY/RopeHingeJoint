@@ -27,33 +27,33 @@ namespace Utils
         Black
     }
 
-    public class LevelConfig
-    {
-        public string Name;
-        public int Level;
-        public string PrefabName;
-        public string BoxConfig;
-        public string iconPath;
-        public string iconGrayPath;
-        public string iconCollectPath;
-        public string iconCollectGrayPath;
-    }
+    // public class LevelConfig
+    // {
+    //     public string Name;
+    //     public int Level;
+    //     public string PrefabName;
+    //     public string BoxConfig;
+    //     public string iconPath;
+    //     public string iconGrayPath;
+    //     public string iconCollectPath;
+    //     public string iconCollectGrayPath;
+    // }
 
     public static class Util
     {
-        public static List<LevelConfig> LevelConfigs = new List<LevelConfig>()
-        {
-            new LevelConfig(){Name = "花", Level = 1, PrefabName = "1",  BoxConfig ="LevelConfig_1", iconPath = "y2", iconGrayPath = "y1",iconCollectPath = "level1N",iconCollectGrayPath = "level1G"},
-            new LevelConfig(){Name = "蓝莓", Level = 2, PrefabName = "2",BoxConfig ="LevelConfig_2", iconPath = "l2", iconGrayPath = "l1",iconCollectPath = "level2N",iconCollectGrayPath = "level2G"},
-            new LevelConfig(){Name = "橘子", Level = 3, PrefabName = "3",BoxConfig ="LevelConfig_3", iconPath = "j2", iconGrayPath = "j1",iconCollectPath = "level3N",iconCollectGrayPath = "level3G"},
-            new LevelConfig(){Name = "蛋糕", Level = 4, PrefabName = "4",BoxConfig ="LevelConfig_4", iconPath = "d2", iconGrayPath = "d1",iconCollectPath = "level4N",iconCollectGrayPath = "level4G"},
-            new LevelConfig(){Name = "沙拉", Level = 5, PrefabName = "5",BoxConfig ="LevelConfig_5", iconPath = "s2", iconGrayPath = "s1",iconCollectPath = "level5N",iconCollectGrayPath = "level5G"},
-            new LevelConfig(){Name = "烧烤", Level = 6, PrefabName = "6",BoxConfig ="LevelConfig_6", iconPath = "kc2", iconGrayPath = "kc1",iconCollectPath = "level6N",iconCollectGrayPath = "level6G"},
-            new LevelConfig(){Name = "哈密瓜", Level = 7, PrefabName = "7",BoxConfig ="LevelConfig_7", iconPath = "hmg2", iconGrayPath = "hmg1",iconCollectPath = "level7N",iconCollectGrayPath = "level7G"},
-            new LevelConfig(){Name = "寿司组合", Level = 8, PrefabName = "8",BoxConfig ="LevelConfig_8", iconPath = "ss2", iconGrayPath = "ss1",iconCollectPath = "level8N",iconCollectGrayPath = "level8G"},
-            new LevelConfig(){Name = "葡萄", Level = 9, PrefabName = "9",BoxConfig ="LevelConfig_9", iconPath = "pt2", iconGrayPath = "pt1",iconCollectPath = "level9N",iconCollectGrayPath = "level9G"},
-            new LevelConfig(){Name = "海鲜拼盘", Level = 10, PrefabName = "10",BoxConfig ="LevelConfig_10", iconPath = "hx2", iconGrayPath = "hx1",iconCollectPath = "level10N",iconCollectGrayPath = "level10G"}
-        };
+        // public static List<LevelConfig> LevelConfigs = new List<LevelConfig>()
+        // {
+        //     new LevelConfig(){Name = "花", Level = 1, PrefabName = "1",  BoxConfig ="LevelConfig_1", iconPath = "y2", iconGrayPath = "y1",iconCollectPath = "level1N",iconCollectGrayPath = "level1G"},
+        //     new LevelConfig(){Name = "蓝莓", Level = 2, PrefabName = "2",BoxConfig ="LevelConfig_2", iconPath = "l2", iconGrayPath = "l1",iconCollectPath = "level2N",iconCollectGrayPath = "level2G"},
+        //     new LevelConfig(){Name = "橘子", Level = 3, PrefabName = "3",BoxConfig ="LevelConfig_3", iconPath = "j2", iconGrayPath = "j1",iconCollectPath = "level3N",iconCollectGrayPath = "level3G"},
+        //     new LevelConfig(){Name = "蛋糕", Level = 4, PrefabName = "4",BoxConfig ="LevelConfig_4", iconPath = "d2", iconGrayPath = "d1",iconCollectPath = "level4N",iconCollectGrayPath = "level4G"},
+        //     new LevelConfig(){Name = "沙拉", Level = 5, PrefabName = "5",BoxConfig ="LevelConfig_5", iconPath = "s2", iconGrayPath = "s1",iconCollectPath = "level5N",iconCollectGrayPath = "level5G"},
+        //     new LevelConfig(){Name = "烧烤", Level = 6, PrefabName = "6",BoxConfig ="LevelConfig_6", iconPath = "kc2", iconGrayPath = "kc1",iconCollectPath = "level6N",iconCollectGrayPath = "level6G"},
+        //     new LevelConfig(){Name = "哈密瓜", Level = 7, PrefabName = "7",BoxConfig ="LevelConfig_7", iconPath = "hmg2", iconGrayPath = "hmg1",iconCollectPath = "level7N",iconCollectGrayPath = "level7G"},
+        //     new LevelConfig(){Name = "寿司组合", Level = 8, PrefabName = "8",BoxConfig ="LevelConfig_8", iconPath = "ss2", iconGrayPath = "ss1",iconCollectPath = "level8N",iconCollectGrayPath = "level8G"},
+        //     new LevelConfig(){Name = "葡萄", Level = 9, PrefabName = "9",BoxConfig ="LevelConfig_9", iconPath = "pt2", iconGrayPath = "pt1",iconCollectPath = "level9N",iconCollectGrayPath = "level9G"},
+        //     new LevelConfig(){Name = "海鲜拼盘", Level = 10, PrefabName = "10",BoxConfig ="LevelConfig_10", iconPath = "hx2", iconGrayPath = "hx1",iconCollectPath = "level10N",iconCollectGrayPath = "level10G"}
+        // };
 
         public static Dictionary<ItemColor, Color> ColorMapping = new Dictionary<ItemColor, Color>()
     {

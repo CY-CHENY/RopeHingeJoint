@@ -52,8 +52,16 @@ public class MoveToSpareCommand : AbstractCommand
         yield return null;
         blockData.Item = new ItemData() { Color = item.Color, ItemTransform = block.transform };
 
+        
+        Camera mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        Camera modelCamera = GameObject.FindWithTag("ModelCamera").GetComponent<Camera>();
+        Vector3 screenPos1 = modelCamera.WorldToScreenPoint(wool.transform.position);
+        // 将屏幕位置转回世界坐标，但使用renderCamera
+        Vector3 worldPos1 = mainCamera.ScreenToWorldPoint(
+            new Vector3(screenPos1.x, screenPos1.y, mainCamera.nearClipPlane + 1));
         //从模型到备用区
-        var start = wool.transform.position;
+        var start = worldPos1;
+        //Debug.Log($"wool.position = {wool.transform.position} , worldPos1 = {worldPos1} ,screenPos1 = {screenPos1}");
         var end = new Vector3(block.transform.position.x, block.transform.position.y, block.transform.position.z - 0.5f);
         //先从起点附近延长到终点
         Vector3 dir = end - start;

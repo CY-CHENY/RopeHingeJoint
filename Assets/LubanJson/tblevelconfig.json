@@ -1,0 +1,102 @@
+[
+  {
+    "Level": 1,
+    "Name": "花",
+    "PrefabName": "1",
+    "BoxConfig": "LevelConfig_1",
+    "iconPath": "y2",
+    "iconGrayPath": "y1",
+    "iconCollectPath": "level1N",
+    "iconCollectGrayPath": "level1G"
+  },
+  {
+    "Level": 2,
+    "Name": "蓝莓",
+    "PrefabName": "2",
+    "BoxConfig": "LevelConfig_2",
+    "iconPath": "l2",
+    "iconGrayPath": "l1",
+    "iconCollectPath": "level2N",
+    "iconCollectGrayPath": "level2G"
+  },
+  {
+    "Level": 3,
+    "Name": "橘子",
+    "PrefabName": "3",
+    "BoxConfig": "LevelConfig_3",
+    "iconPath": "j2",
+    "iconGrayPath": "j1",
+    "iconCollectPath": "level3N",
+    "iconCollectGrayPath": "level3G"
+  },
+  {
+    "Level": 4,
+    "Name": "蛋糕",
+    "PrefabName": "4",
+    "BoxConfig": "LevelConfig_4",
+    "iconPath": "d2",
+    "iconGrayPath": "d1",
+    "iconCollectPath": "level4N",
+    "iconCollectGrayPath": "level4G"
+  },
+  {
+    "Level": 5,
+    "Name": "沙拉",
+    "PrefabName": "5",
+    "BoxConfig": "LevelConfig_5",
+    "iconPath": "s2",
+    "iconGrayPath": "s1",
+    "iconCollectPath": "level5N",
+    "iconCollectGrayPath": "level5G"
+  },
+  {
+    "Level": 6,
+    "Name": "烧烤",
+    "PrefabName": "6",
+    "BoxConfig": "LevelConfig_6",
+    "iconPath": "kc2",
+    "iconGrayPath": "kc1",
+    "iconCollectPath": "level6N",
+    "iconCollectGrayPath": "level6G"
+  },
+  {
+    "Level": 7,
+    "Name": "哈密瓜",
+    "PrefabName": "7",
+    "BoxConfig": "LevelConfig_7",
+    "iconPath": "hmg2",
+    "iconGrayPath": "hmg1",
+    "iconCollectPath": "level7N",
+    "iconCollectGrayPath": "level7G"
+  },
+  {
+    "Level": 8,
+    "Name": "寿司组合",
+    "PrefabName": "8",
+    "BoxConfig": "LevelConfig_8",
+    "iconPath": "ss2",
+    "iconGrayPath": "ss1",
+    "iconCollectPath": "level8N",
+    "iconCollectGrayPath": "level8G"
+  },
+  {
+    "Level": 9,
+    "Name": "葡萄",
+    "PrefabName": "9",
+    "BoxConfig": "LevelConfig_9",
+    "iconPath": "pt2",
+    "iconGrayPath": "pt1",
+    "iconCollectPath": "level9N",
+    "iconCollectGrayPath": "level9G"
+  },
+  {
+    "Level": 10,
+    "Name": "海鲜拼盘",
+    "PrefabName": "10",
+    "BoxConfig": "LevelConfig_10",
+    "iconPath": "hx2",
+    "iconGrayPath": "hx1",
+    "iconCollectPath": "level10N",
+    "iconCollectGrayPath": "level10G"
+  }
+]

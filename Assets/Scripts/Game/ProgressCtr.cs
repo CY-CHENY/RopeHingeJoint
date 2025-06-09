@@ -1,3 +1,4 @@
+using cfg;
 using QFramework;
 using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -23,7 +24,7 @@ public class ProgressCtr : MonoBehaviour, IController
     private async void OnCurrentLevelChanged(int level)
     {
         BindableDictionary<int, LevelConfig> levelData = this.GetModel<RuntimeModel>().LevelLegoData;
-
+        
         int name = (level - 1) % 5;
         foreach (var go in frontNodes)
         {
@@ -52,7 +53,7 @@ public class ProgressCtr : MonoBehaviour, IController
                 icon.LocalScale(new Vector3(defaultScale, defaultScale, defaultScale));
             }
 
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(data.iconPath);
+            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(data.IconPath);
             if (obj.Status == AsyncOperationStatus.Succeeded)
             {
                 icon.GetComponent<SpriteRenderer>().sprite = obj.Result.Instantiate();

@@ -19,25 +19,7 @@ public class ModelManager : MonoBehaviour, IController
     Dictionary<string, Transform> group = new Dictionary<string, Transform>();
 
     List<Transform> current = new List<Transform>();
-
-
-    public async UniTask InitModel2()
-    {
-        var model = this.GetModel<RuntimeModel>();
-
-        Material material = null;
-        var objHandle = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Material>("Wool");
-        if (objHandle.Status == AsyncOperationStatus.Succeeded)
-        {
-            material = objHandle.Result;
-        }
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Transform child = transform.GetChild(i);
-            BoxCollider boxCollider = child.GetOrAddComponent<BoxCollider>();
-        }
-    }
+    
     
     public async UniTask InitModel()
     {
@@ -50,39 +32,33 @@ public class ModelManager : MonoBehaviour, IController
             material = objHandle.Result;
         }
         
+        //初始化主干
+        for (int i = 0; i < transform.Find("mainBody").childCount; i++)
+        {
+            Transform child = transform.Find("mainBody").GetChild(i);
+            child.GetOrAddComponent<Rigidbody>().isKinematic = true;
+            child.GetOrAddComponent<BoxCollider>().isTrigger = false;
+        }
         
-
+        Rigidbody mainRigidBody = transform.Find("mainBody").GetComponent<Rigidbody>();
+        Dictionary<int, Rigidbody> DicRopeRigid = new Dictionary<int, Rigidbody>();
+        Dictionary<int, Rigidbody> DicFaceRigid = new Dictionary<int, Rigidbody>();
+        //初始化面
         for (int i = 0; i < transform.Find("Face").childCount; i++)
         {
             Transform child = transform.Find("Face").GetChild(i);
+          //  HingeJoint childJoint = child.GetOrAddComponent<HingeJoint>();
+            child.GetOrAddComponent<Rigidbody>().drag = 8;
             if (child.name.Contains("rope"))
             {
-                child.AddComponent<ModelRope>();
+                string[] index = child.name.Split('_');
+                DicRopeRigid.Add(int.Parse(index[1]),child.GetComponent<Rigidbody>());
             } 
             if (child.name.Contains("face"))
             {
-                child.AddComponent<ModelFace>();
-                child.GetComponent<ModelFace>().Init();
-            }
-
-            if (child.GetComponent<HingeJoint>() != null)
-            {
-                HingeJoint[] hj = child.GetComponents<HingeJoint>();
-                foreach (var v in hj)
-                {
-                    v.useLimits = true;
-                    v.limits = new JointLimits {
-                        min = -10,  // 最小角度
-                        max = 10,   // 最大角度
-                        bounciness = 0,  // 弹性设为0
-                        contactDistance = 0.1f
-                    };
-                    v.useSpring = true;
-                    v.spring = new JointSpring()
-                    {
-                        spring = 10,
-                    };
-                }
+                string[] index = child.name.Split('_');
+                DicFaceRigid.Add(int.Parse(index[1]),child.GetComponent<Rigidbody>());
+       
             }
             MeshRenderer meshRenderer = child.GetComponent<MeshRenderer>();
             Log.Debug("meshRenderer = "+meshRenderer);
@@ -126,8 +102,50 @@ public class ModelManager : MonoBehaviour, IController
             //collider.convex = true;
             obj.GetOrAddComponent<BoxCollider>();
             obj.GetComponent<BoxCollider>().isTrigger = true;
-
         }
+
+        foreach (var v in DicRopeRigid)
+        {
+            HingeJoint hingeJoint = v.Value.AddComponent<HingeJoint>();
+            hingeJoint.connectedBody = mainRigidBody;
+            hingeJoint.useLimits = true;
+            hingeJoint.limits = new JointLimits {
+                min = -10,  // 最小角度
+                max = 10,   // 最大角度
+                bounciness = 0,  // 弹性设为0
+                contactDistance = 0.1f
+            };
+            hingeJoint.useSpring = true;
+            hingeJoint.spring = new JointSpring()
+            {
+                spring = 10,
+            };
+            hingeJoint.axis = Vector3.forward;//(0,0,1)
+            hingeJoint.anchor = new Vector3(0, 0.5f, 0);
+            hingeJoint.GetOrAddComponent<ModelRope>();
+        }
+        
+        foreach (var v in DicFaceRigid)
+        {
+            HingeJoint hingeJoint = v.Value.AddComponent<HingeJoint>();
+            hingeJoint.connectedBody = DicRopeRigid[v.Key];
+            hingeJoint.useLimits = true;
+            hingeJoint.limits = new JointLimits {
+                min = -30,  // 最小角度
+                max = 30,   // 最大角度
+                bounciness = 0,  // 弹性设为0
+                contactDistance = 0.1f
+            };
+            hingeJoint.useSpring = true;
+            hingeJoint.spring = new JointSpring()
+            {
+                spring = 10,
+            };
+            hingeJoint.axis = Vector3.forward;//(0,0,1)
+            hingeJoint.anchor = new Vector3(0, 0.5f, 0);
+            hingeJoint.GetOrAddComponent<ModelFace>().Init();
+        }
+        
     }
 
     // Start is called before the first frame update

@@ -19,9 +19,8 @@ public class PrepareGameDataCommand : AbstractCommand
         //暂时写死 可优化
         for (int i = 1; i <= 10; i++)
         {
-            var legoData = Util.LevelConfigs.Find(v => v.Level == i);
-            UnityEngine.Debug.Log("add:" + i + "legoData");
-            runtimeModel.LevelLegoData.Add(i, legoData);
+            UnityEngine.Debug.Log("add:" + i + "TbLevelConfig");
+            runtimeModel.LevelLegoData.Add(i, ConfigSystem.GetTable().TbLevelConfig.Get(i));
         }
         UnityEngine.Debug.Log("PrepareGameData Finished");
         

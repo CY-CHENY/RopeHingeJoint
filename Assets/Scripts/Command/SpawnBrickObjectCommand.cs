@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using cfg;
 using Cysharp.Threading.Tasks;
 using QFramework;
 using Unity.VisualScripting;
@@ -28,12 +29,12 @@ public class SpawnBrickObjectCommand : AbstractCommand
         runtimeModel.AllItems.Clear();
 
         int level = runtimeModel.CurrentLevel.Value;
-        LevelConfig levelConfig = runtimeModel.LevelLegoData[level];
+        LevelConfig levelConfig = ConfigSystem.GetTable().TbLevelConfig.Get(level);//runtimeModel.LevelLegoData[level]);
 
         await this.GetSystem<ColorSystem>().LoadTex();
 
         var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<GameObject>
-            ($"Assets/GameResources/Prefabs/Level/{int.Parse(levelConfig.PrefabName)+10}.prefab");
+            ($"Assets/GameResources/Prefabs/Level/{int.Parse(levelConfig.PrefabName)+11}.prefab");
         GameObject instance = null;
         if (obj.Status == AsyncOperationStatus.Succeeded)
         {

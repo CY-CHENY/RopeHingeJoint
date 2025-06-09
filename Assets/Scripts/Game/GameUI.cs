@@ -1,4 +1,5 @@
 using System.Linq;
+using cfg;
 using DG.Tweening;
 using QFramework;
 using UnityEngine;
@@ -56,7 +57,7 @@ public class GameUI : MonoBehaviour, IController
         {
             this.GetSystem<AudioSystem>().PlaySingleSound("dianji");
             this.GetSystem<VibrateSystem>().VibrateShort();
-            this.SendCommand<ResetModelCommand>();
+            this.SendCommand<ResetModelCameraSizeCommand>();
         });
 
         zoomInButton.onClick.AddListener(() =>
@@ -136,10 +137,11 @@ public class GameUI : MonoBehaviour, IController
         var active = this.GetModel<RuntimeModel>().ActiveBoxes.Where(b => b.Type == BoxType.Normal).Count();
         var poolCount = this.GetModel<RuntimeModel>().BoxPool.Count;
 
-        //Debug.Log($"left:{active} {queueCount} total:{total}");
+        Debug.Log($"total:{total} ,active:{active} ,poolCount:{poolCount}");
 
         float percent = (float)(total - (active + poolCount)) / total;
         PercenSlider.value = percent;
+        Debug.Log((int)(percent * 100));
         PercentText.text = $"{(int)(percent * 100)}%";
     }
 
@@ -171,13 +173,13 @@ public class GameUI : MonoBehaviour, IController
             LevelConfig data = levelData[level];
             Sprite spriteIcon = null;
             Sprite spriteGray = null;
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(data.iconPath);
+            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(data.IconPath);
             if (obj.Status == AsyncOperationStatus.Succeeded)
             {
                 spriteIcon = obj.Result;
             }
 
-            var obj2 = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(data.iconGrayPath);
+            var obj2 = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(data.IconGrayPath);
             if (obj2.Status == AsyncOperationStatus.Succeeded)
             {
                 spriteGray = obj2.Result;

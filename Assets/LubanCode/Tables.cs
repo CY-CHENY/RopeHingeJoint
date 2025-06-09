@@ -15,6 +15,7 @@ namespace cfg
 public partial class Tables
 {
     public TbTest TbTest {get; }
+    public TbLevelConfig TbLevelConfig {get; }
     public TbPlayer TbPlayer {get; }
     public TbTestA TbTestA {get; }
     public TbTestEnum TbTestEnum {get; }
@@ -22,6 +23,7 @@ public partial class Tables
     public Tables(System.Func<string, JSONNode> loader)
     {
         TbTest = new TbTest(loader("tbtest"));
+        TbLevelConfig = new TbLevelConfig(loader("tblevelconfig"));
         TbPlayer = new TbPlayer(loader("tbplayer"));
         TbTestA = new TbTestA(loader("tbtesta"));
         TbTestEnum = new TbTestEnum(loader("tbtestenum"));
@@ -31,6 +33,7 @@ public partial class Tables
     private void ResolveRef()
     {
         TbTest.ResolveRef(this);
+        TbLevelConfig.ResolveRef(this);
         TbPlayer.ResolveRef(this);
         TbTestA.ResolveRef(this);
         TbTestEnum.ResolveRef(this);

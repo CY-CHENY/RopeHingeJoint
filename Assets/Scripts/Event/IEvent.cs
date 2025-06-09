@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public struct ResetModelRotationEvent
+public struct ResetModelCameraScaleEvent
 {
 
 }

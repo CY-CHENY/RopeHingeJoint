@@ -7,7 +7,7 @@ public class MBrick : MonoBehaviour, IController
 {
 
     private RotationModel rotaionModel;
-    private ScaleModel scaleModel;
+    private CameraSizeModel _cameraSizeModel;
 
     private Transform rotateBody;
 
@@ -25,10 +25,9 @@ public class MBrick : MonoBehaviour, IController
         rotaionModel = this.GetModel<RotationModel>();
         rotaionModel.EulerAngles.RegisterWithInitValue(OnRotationChanged).UnRegisterWhenGameObjectDestroyed(gameObject);
 
-        scaleModel = this.GetModel<ScaleModel>();
-        scaleModel.Scale.RegisterWithInitValue(OnScaleChanged).UnRegisterWhenGameObjectDestroyed(gameObject);
+        _cameraSizeModel = this.GetModel<CameraSizeModel>();
+        _cameraSizeModel.Scale.RegisterWithInitValue(OnScaleChanged).UnRegisterWhenGameObjectDestroyed(gameObject);
 
-        this.RegisterEvent<ResetModelRotationEvent>(OnResetModelRotation).UnRegisterWhenGameObjectDestroyed(gameObject);
         this.RegisterEvent<BrickObjectSpawnedEvent>(OnBrickObjectSpawned).UnRegisterWhenGameObjectDestroyed(gameObject);
     }
 
@@ -50,11 +49,6 @@ public class MBrick : MonoBehaviour, IController
     private void OnScaleChanged(float newScale)
     {
         transform.DOScale(newScale, 0.3f);
-    }
-
-    private void OnResetModelRotation(ResetModelRotationEvent evt)
-    {
-        rotateBody.DORotate(new Vector3(0, 0, 0), 0.3f);
     }
 
     private void OnRotationChanged(float newEuler)

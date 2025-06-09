@@ -20,8 +20,11 @@ public class ModelRope : BaseController
     {
         foreach (var v in listModelFace)
         {
-            v.GetComponent<Rigidbody>().WakeUp();
-            v.GetComponent<Rigidbody>().AddTorque(Random.onUnitSphere * Random.Range(1f, 2f), ForceMode.Impulse);
+            Rigidbody rigidbody = v.GetComponent<Rigidbody>();
+            rigidbody.WakeUp();
+            rigidbody.drag = 1;
+            rigidbody.GetComponent<BoxCollider>().isTrigger = false;
+            rigidbody.AddTorque(Random.onUnitSphere * Random.Range(1f, 2f), ForceMode.Impulse);
         }
     }
 }

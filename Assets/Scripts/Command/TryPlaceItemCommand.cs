@@ -16,24 +16,26 @@ public class TryPlaceItemCommand : AbstractCommand
     {
         var model = this.GetModel<RuntimeModel>();
 
+        //先找盒子里面有相同颜色的盒子
         var unEmptyMatchedBox = model.ActiveBoxes.FirstOrDefault(b => b.Type == BoxType.Normal && b.Color == item.Color && b.CurrentCount > 0 && b.CurrentCount < 3);
         if (unEmptyMatchedBox != null)
         {
             //先找盒子里面有相同颜色的盒子
             this.SendEvent(new ClickModelEvent { transform = item.ItemTransform });
-            UnityEngine.Debug.Log("移动到盒子");
+            UnityEngine.Debug.Log("移动到盒子1");
             //移动到盒子
             model.AllItems.Remove(item);
             this.SendCommand(new MoveToBoxCommand(item, unEmptyMatchedBox, up));
             return;
         }
 
+        //空的盒子
         var matchedBox = model.ActiveBoxes.FirstOrDefault(b => b.Type == BoxType.Normal && b.Color == item.Color && b.CurrentCount < 3);
         //var matchedBox = model.ActiveBoxes.FirstOrDefault(b => b.Type == BoxType.Normal && b.CurrentCount < 3);
         if (matchedBox != null)
         {
             this.SendEvent(new ClickModelEvent { transform = item.ItemTransform });
-            UnityEngine.Debug.Log("移动到盒子");
+            UnityEngine.Debug.Log("移动到盒子2");
             //移动到盒子
             model.AllItems.Remove(item);
             this.SendCommand(new MoveToBoxCommand(item, matchedBox, up));

@@ -26,11 +26,14 @@ public class DissolveController : MonoBehaviour
     private float Max;
     private float Min;
     private bool Up;
-
+    private Camera mainCamera;
+    private Camera modelCamera;
     void Awake()
     {
         // Debug.Log(transform.right);    
         // Debug.DrawRay(transform.position, transform.right * 100f, Color.red, 5f);
+        mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        modelCamera = GameObject.FindWithTag("ModelCamera").GetComponent<Camera>();
     }
 
 
@@ -67,7 +70,7 @@ public class DissolveController : MonoBehaviour
 
     private void GetOffset(bool up, out float max, out float min)
     {
-        if (up)
+        if (up)//上下
         {
             float top = bounds.max.y + 0.5f;
             top = Mathf.Ceil(top * 100);
@@ -75,7 +78,7 @@ public class DissolveController : MonoBehaviour
             max = top;
             min = bounds.min.y + 0.5f;
         }
-        else
+        else//左右
         {
             float top = bounds.max.x + 0.5f;
             //正常情况top应该小于0
@@ -88,19 +91,6 @@ public class DissolveController : MonoBehaviour
 
     private void Update()
     {
-        // if (Input.GetMouseButtonDown(0))
-        // {
-        //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //     RaycastHit hit;
-        //     if (Physics.Raycast(ray, out hit, 100f))
-        //     {
-        //         var localPos = transform.InverseTransformPoint(hit.point);
-        //         Debug.Log(localPos);
-        //         InitCtl();
-        //         StartDissolve(10f, localPos.y > 0);
-        //     }
-        //     return;
-        // }
         if (!Enable)
             return;
         if (raysFired >= rayCount)
@@ -130,11 +120,6 @@ public class DissolveController : MonoBehaviour
 
         var offset = material.GetVector("_DissolveOffest");
         float percent = (float)Math.Round((offset.y - Min) / (Max - Min), 2);
-        // Debug.Log($"max:{Max} min:{Min} offset:{offset.y} percent:{percent}");
-
-        //float baseY = Up ? bounds.center.y - (bounds.size.y / 2f) : bounds.center.y + (bounds.size.y / 2f);
-        //局部y坐标
-        //float yPos = Up ? baseY + (percent * bounds.size.y) : baseY - (percent * bounds.size.y);
         float baseY = Up ? bounds.center.y - (bounds.size.y / 2f) : bounds.center.x + (bounds.size.x / 2f);
         //局部y坐标
         float yPos = Up ? baseY + (percent * bounds.size.y) : baseY - (percent * bounds.size.x);
@@ -153,9 +138,12 @@ public class DissolveController : MonoBehaviour
             {
                 if (hit.collider.gameObject.Equals(gameObject))
                 {
-                    // Debug.DrawRay(rayOrigin, direction * 100f, Color.red, 5f);
-                    //CreateHitMarker(hit.point, Color.red);
-                    this.callback?.Invoke(hit.point);
+                    mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+                    modelCamera = GameObject.FindWithTag("ModelCamera").GetComponent<Camera>();
+                    Vector3 screenPos1 = modelCamera.WorldToScreenPoint(hit.point);
+                    // 将屏幕位置转回世界坐标，但使用mainCamera
+                    Vector3 worldPos1 = mainCamera.ScreenToWorldPoint(new Vector3(screenPos1.x, screenPos1.y, mainCamera.nearClipPlane + 1));
+                    this.callback?.Invoke(worldPos1);
                     break;
                 }
             }
@@ -202,7 +190,7 @@ public class DissolveController : MonoBehaviour
         timeBetweenRays = time / rayCount;
         Enable = true;
         this.callback = callback;
-        material.DOVector(new Vector4(up?0:min, up?min:0, 0), "_DissolveOffest", time).SetEase(Ease.Linear).OnComplete(() =>
+        material.DOVector(new Vector4(0, min, 0), "_DissolveOffest", time).SetEase(Ease.Linear).OnComplete(() =>
         {
             this.callback = null;
             Enable = false;
