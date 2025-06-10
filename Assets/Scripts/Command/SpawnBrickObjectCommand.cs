@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using cfg;
 using Cysharp.Threading.Tasks;
 using QFramework;
@@ -58,8 +59,13 @@ public class SpawnBrickObjectCommand : AbstractCommand
             runtimeModel.BoxPool.Add(new BoxData() { Type = BoxType.Normal, Color = (ItemColor)nColor, CurrentCount = 0 });
         }
         
+        StringBuilder strb = new StringBuilder();
+        for (int i = 0; i < runtimeModel.AllItems.Count; i++)
+        {
+            strb.Append(runtimeModel.AllItems[i].Color + ", ");
+        }
 
-        Debug.Log($"总共{runtimeModel.AllItems.Count}个模型");
+        Debug.Log($"总共{runtimeModel.AllItems.Count}个绳子可收集 绳子颜色 = {strb}");
         PrepareColor();
         await PrepareBox();
         SetColorToModel();
@@ -113,7 +119,13 @@ public class SpawnBrickObjectCommand : AbstractCommand
             Debug.LogError($"模型数量错误:{model.AllItems.Count}");
             return;
         }
-        Debug.Log($"盒子数量:{boxCount}");
+
+        StringBuilder strb = new StringBuilder();
+        for (int i = 0; i < model.BoxPool.Count; i++)
+        {
+            strb.Append(model.BoxPool[i].Color + ", ");
+        }
+        Debug.Log($"盒子数量:{boxCount} 盒子颜色： {strb}");
         model.TotalBox.Value = boxCount;
 
         var uncoloredModels = model.AllItems.Where(i => i.Color == ItemColor.None).ToList();
@@ -121,9 +133,10 @@ public class SpawnBrickObjectCommand : AbstractCommand
         //已经全部分配颜色了 盒子也要相应的配置完成
         if (uncoloredModels.Count <= 0)
         {
+            Debug.Log("-----------没有未上色的模型-----------");
             return;
         }
-        
+        Debug.Log("-----------有未上色的模型---------");
         //有没有颜色的方块就需要随机给他上色
         Util.ShuffleList(uncoloredModels);
 

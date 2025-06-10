@@ -35,7 +35,7 @@ public class MBrick : MonoBehaviour, IController
     {
         Debug.Log("OnBrickObjectSpawned");
         this.GetModel<RuntimeModel>().GameStart.Value = true;
-        return;
+        return;//不需要旋转模型
         transform.localEulerAngles = new Vector3(-10, 0, 0);
         var sequence = DOTween.Sequence();
         sequence.Append(transform.DOBlendableLocalRotateBy(new Vector3(0, 360, 0), 1f, RotateMode.FastBeyond360).SetDelay(0.3f))

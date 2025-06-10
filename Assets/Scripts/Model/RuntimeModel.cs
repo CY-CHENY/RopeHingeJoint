@@ -42,7 +42,6 @@ public class RuntimeModel : AbstractModel
     public BindableProperty<bool> GameOver = new BindableProperty<bool>();
 
     public BindableList<BoxData> ActiveBoxes = new BindableList<BoxData>();
-    //public BindableList<ItemData> SpareItems = new BindableList<ItemData>();
     public BindableList<BlockData> SpareBlockItems = new BindableList<BlockData>();
     public BindableList<ItemData> AllItems = new BindableList<ItemData>();
     public BindableProperty<int> totalCount = new BindableProperty<int>();
@@ -52,7 +51,6 @@ public class RuntimeModel : AbstractModel
     /// </summary>
     public BindableProperty<int> TotalBox = new BindableProperty<int>();
 
-    //public BindableList<BoxData> BoxQueue = new BindableList<BoxData>();
     /// <summary>
     /// 盒子池 每用完一个就从这里面取
     /// </summary>

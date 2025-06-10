@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class MainLaunch : MonoBehaviour,IController
 {
-    public Transform modelSpwan;
+    public Transform LegoSpawn;
 
     //public Button btn_show;
     private int index = 1;
@@ -24,7 +24,7 @@ public class MainLaunch : MonoBehaviour,IController
 
     private void OnEnable()
     {
-        this.SendCommand(new SpawnMainUIBrickObjectCommand(modelSpwan.localPosition,1));
+        this.SendCommand(new SpawnMainUIBrickObjectCommand(LegoSpawn.localPosition,1));
     }
 
     public IArchitecture GetArchitecture()

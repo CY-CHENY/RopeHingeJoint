@@ -41,8 +41,8 @@ public class GamePlay : BaseController
         model.SpareBlockItems.Clear();
 
         model.ActiveBoxes.Clear();
-        model.ActiveBoxes.OnAdd.Register(OnActiveBoxAdded).UnRegisterWhenGameObjectDestroyed(gameObject);
-        model.SpareCapacity.RegisterWithInitValue(OnSpareBlockChanged).UnRegisterWhenGameObjectDestroyed(gameObject);
+        model.ActiveBoxes.OnAdd.Register(OnActiveBoxAdded).UnRegisterWhenGameObjectDestroyed(gameObject);//生成上方盒子
+        model.SpareCapacity.RegisterWithInitValue(OnSpareBlockChanged).UnRegisterWhenGameObjectDestroyed(gameObject);//盒子下方临时存储位置
 
         this.GetModel<RuntimeModel>().SpareBlockItems.OnCountChanged.Register(OnChanged).UnRegisterWhenGameObjectDestroyed(gameObject);
         this.RegisterEvent<ItemToSparEvent>(OnItemToSpareEvent).UnRegisterWhenGameObjectDestroyed(gameObject);

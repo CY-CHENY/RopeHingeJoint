@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9014784553775390293}
   - component: {fileID: 1225595330402228190}
   - component: {fileID: 695434327806266817}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8545147756587427276}
   - component: {fileID: 4378688842557037117}
   - component: {fileID: 6337616244413223826}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,13 +109,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824132524261724465}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.4936535, z: 0, w: 0.8696587}
-  m_LocalPosition: {x: 2.416, y: 3.742, z: -1.187}
+  m_LocalRotation: {x: -0, y: -0.6873242, z: -0, w: 0.7263507}
+  m_LocalPosition: {x: 2.683, y: 3.7740002, z: 0.047}
   m_LocalScale: {x: 0.056899447, y: 1, z: 1.2299}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2864990857924637673}
-  m_LocalEulerAnglesHint: {x: 0, y: -59.162, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -86.837, z: 0}
 --- !u!33 &4378688842557037117
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 7449620749688491768}
   - component: {fileID: 3645007931699826714}
   - component: {fileID: 2958886397667631188}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,13 +192,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883788985839680779}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.49365714, z: -0, w: 0.8696566}
-  m_LocalPosition: {x: 2.445, y: 4.338, z: -1.221}
+  m_LocalRotation: {x: -0, y: -0.687327, z: -0, w: 0.72634804}
+  m_LocalPosition: {x: 2.725278, y: 4.37, z: 0.039119925}
   m_LocalScale: {x: 0.24367502, y: 0.19267619, z: 0.92530274}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2864990857924637673}
-  m_LocalEulerAnglesHint: {x: 0, y: -59.162, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -86.838, z: 0}
 --- !u!33 &3645007931699826714
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 8644239849708181311}
   - component: {fileID: 3972691033667937799}
   - component: {fileID: 3102853805696495465}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 805239663925828089}
   - component: {fileID: 1076918088518690205}
   - component: {fileID: 6580171381847075008}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 6195628814486767455}
   - component: {fileID: 6304632667894544081}
   - component: {fileID: 2199226166683162235}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,13 +441,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566866749258673995}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.85642546, z: -0, w: 0.51627076}
-  m_LocalPosition: {x: -2.347, y: 3.755, z: 1.191}
+  m_LocalRotation: {x: -0, y: 0.7080923, z: -0, w: 0.70611995}
+  m_LocalPosition: {x: -2.634, y: 3.7870002, z: 0.031}
   m_LocalScale: {x: 0.056899447, y: 1, z: 1.2299}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2864990857924637673}
-  m_LocalEulerAnglesHint: {x: 0, y: 117.835, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.16, z: 0}
 --- !u!33 &6304632667894544081
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 1617638689912505839}
   - component: {fileID: 8085449533484939928}
   - component: {fileID: 1352290819944739932}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: mainBody11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 1189295141346975606}
   - component: {fileID: 2136560875955237060}
   - component: {fileID: 7897717107358015287}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: mainBody11 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 6348974196623385954}
   - component: {fileID: 2448990897956194365}
   - component: {fileID: 3084846124714935226}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 2335608548404792169}
   - component: {fileID: 7840617819129540589}
   - component: {fileID: 1560640316767797254}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +841,7 @@ GameObject:
   - component: {fileID: 3083011997242662401}
   - component: {fileID: 3725134329698885152}
   - component: {fileID: 5477412262689384569}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -922,7 +922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2864990857924637673}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -979,7 +979,7 @@ GameObject:
   - component: {fileID: 3633641344592897348}
   - component: {fileID: 4180148446939122109}
   - component: {fileID: 2327241804352146591}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1062,7 +1062,7 @@ GameObject:
   - component: {fileID: 2008365995151024720}
   - component: {fileID: 8967116382206138508}
   - component: {fileID: 2231419089301706682}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 4476040215524745022}
   - component: {fileID: 8102087984554623412}
   - component: {fileID: 3220236276374452115}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1228,7 +1228,7 @@ GameObject:
   - component: {fileID: 3998772315755289428}
   - component: {fileID: 7490174223370523246}
   - component: {fileID: 5008728417325299754}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1311,7 +1311,7 @@ GameObject:
   - component: {fileID: 4673969458212947451}
   - component: {fileID: 1847815671948172673}
   - component: {fileID: 7645657518824367268}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1326,13 +1326,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3399426285684916106}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.49365714, z: -0, w: 0.8696566}
-  m_LocalPosition: {x: -2.346, y: 4.338, z: 1.177}
+  m_LocalRotation: {x: -0, y: -0.687327, z: -0, w: 0.72634804}
+  m_LocalPosition: {x: -2.6266115, y: 4.37, z: 0.019066103}
   m_LocalScale: {x: 0.24367502, y: 0.19267619, z: 0.92530274}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2864990857924637673}
-  m_LocalEulerAnglesHint: {x: 0, y: -59.162, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -86.838, z: 0}
 --- !u!33 &1847815671948172673
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1394,7 +1394,7 @@ GameObject:
   - component: {fileID: 2032354858409954583}
   - component: {fileID: 5277213083454081500}
   - component: {fileID: 6171700434064580430}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1477,7 +1477,7 @@ GameObject:
   - component: {fileID: 1502053176355110243}
   - component: {fileID: 7895784574513841226}
   - component: {fileID: 8398445936325259842}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: mainBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1565,7 +1565,7 @@ GameObject:
   - component: {fileID: 2542162300882135566}
   - component: {fileID: 1593637933148314314}
   - component: {fileID: 2748849857715603185}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1646,7 +1646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4720334455369603156}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1681,7 +1681,7 @@ GameObject:
   - component: {fileID: 100094876494838582}
   - component: {fileID: 1463676054421697205}
   - component: {fileID: 5164748876598631029}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1764,7 +1764,7 @@ GameObject:
   - component: {fileID: 6209553807795370412}
   - component: {fileID: 5924585594719776670}
   - component: {fileID: 6239070490055372457}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: mainBody11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1779,13 +1779,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5948109340525097269}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.23482436, z: -0, w: 0.97203785}
+  m_LocalRotation: {x: -0, y: 0.0011656077, z: -0, w: 0.9999994}
   m_LocalPosition: {x: 0, y: 0.42500004, z: 0}
   m_LocalScale: {x: 13.23, y: 0.07, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1502053176355110243}
-  m_LocalEulerAnglesHint: {x: 0, y: 27.163, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.134, z: 0}
 --- !u!33 &5924585594719776670
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1847,7 +1847,7 @@ GameObject:
   - component: {fileID: 6740419870086424832}
   - component: {fileID: 1297573970823997509}
   - component: {fileID: 6593747031268780004}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1930,7 +1930,7 @@ GameObject:
   - component: {fileID: 4722575035686572087}
   - component: {fileID: 6387553894500733855}
   - component: {fileID: 3441055189572042961}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2013,7 +2013,7 @@ GameObject:
   - component: {fileID: 6449235111891339699}
   - component: {fileID: 2243068816106904995}
   - component: {fileID: 7916214656743114832}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: rope_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2096,7 +2096,7 @@ GameObject:
   - component: {fileID: 7252849992035287510}
   - component: {fileID: 7354924536815557488}
   - component: {fileID: 3507899838987967587}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: mainBody33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2179,7 +2179,7 @@ GameObject:
   - component: {fileID: 5270208368475759417}
   - component: {fileID: 5988511378160709607}
   - component: {fileID: 7027080926786311165}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2262,7 +2262,7 @@ GameObject:
   - component: {fileID: 5236703975880916696}
   - component: {fileID: 831371360141067023}
   - component: {fileID: 5309829259028385092}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: mainBody11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2345,7 +2345,7 @@ GameObject:
   - component: {fileID: 70005843824569080}
   - component: {fileID: 1472541080182245835}
   - component: {fileID: 4935016286845406199}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2428,7 +2428,7 @@ GameObject:
   - component: {fileID: 5349949785008305802}
   - component: {fileID: 684162050883419656}
   - component: {fileID: 1693613542267053143}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2511,7 +2511,7 @@ GameObject:
   - component: {fileID: 8489980609504743928}
   - component: {fileID: 2654951230375035047}
   - component: {fileID: 3461855763850514257}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: face_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}

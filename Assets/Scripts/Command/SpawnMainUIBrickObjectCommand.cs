@@ -44,7 +44,7 @@ public class SpawnMainUIBrickObjectCommand : AbstractCommand
             await instance.AddComponent<ModelManager>().InitModel();
         }
 
-        RoatateObj(instance.transform);
+       // RoatateObj(instance.transform);
 
     }
 

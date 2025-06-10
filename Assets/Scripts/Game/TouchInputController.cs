@@ -8,6 +8,7 @@ public class TouchInputController : MonoBehaviour, IController
     private bool isRotating = false;
 
     private float dragThreshold = 5f;
+    public Camera legoCamera;
     public Camera mainCamera;
 
     private RuntimeModel model;
@@ -113,18 +114,27 @@ public class TouchInputController : MonoBehaviour, IController
 
     private void HandleClick(Vector2 position)
     {
-        Ray ray = mainCamera.ScreenPointToRay(position);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 100))
+        int layerMask = LayerMask.GetMask("Default");
+      
+        Ray ray2 = mainCamera.ScreenPointToRay(position);
+        RaycastHit hit2;
+        if (Physics.Raycast(ray2, out hit2, 100))
         {
-            this.GetSystem<AudioSystem>().PlaySingleSound("dianji");
-            Debug.Log("-----Hit----- " + hit.collider.gameObject.name);
-
-            if (hit.collider.gameObject.GetComponent<Box>() != null)//解锁盒子
+            Debug.Log("---mainCamera--Hit----- " + hit2.collider.gameObject.name);
+            if (hit2.collider.gameObject.GetComponent<Box>() != null)//解锁盒子
             {
-                this.SendCommand(new UnlockBoxCommand(hit.collider.gameObject));
+                this.SendCommand(new UnlockBoxCommand(hit2.collider.gameObject));
                 return;
             }
+        }
+        
+        Ray ray = legoCamera.ScreenPointToRay(position);
+        int layerMask2 = LayerMask.GetMask("Lego");
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 100,layerMask2))
+        {
+            this.GetSystem<AudioSystem>().PlaySingleSound("dianji");
+            Debug.Log("---modelCamera--Hit----- " + hit.collider.gameObject.name);
             var model = this.GetModel<RuntimeModel>();
             var item = model.AllItems.FirstOrDefault(i => i.ItemTransform == hit.transform);
             if (item != null)

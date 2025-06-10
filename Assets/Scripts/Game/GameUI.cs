@@ -99,7 +99,6 @@ public class GameUI : MonoBehaviour, IController
 
         var model = this.GetModel<RuntimeModel>();
         model.AllItems.OnCountChanged.Register(AllItemsChanged).UnRegisterWhenGameObjectDestroyed(gameObject);
-
         model.CurrentLevel.RegisterWithInitValue(OnCurrentLevelChanged).UnRegisterWhenGameObjectDestroyed(gameObject);
 
         this.RegisterEvent<BrickObjectSpawnedEvent>(OnBrickObjectSpawned).UnRegisterWhenGameObjectDestroyed(gameObject);
@@ -141,7 +140,6 @@ public class GameUI : MonoBehaviour, IController
 
         float percent = (float)(total - (active + poolCount)) / total;
         PercenSlider.value = percent;
-        Debug.Log((int)(percent * 100));
         PercentText.text = $"{(int)(percent * 100)}%";
     }
 
@@ -159,9 +157,9 @@ public class GameUI : MonoBehaviour, IController
     //     PercentText.text = $"{(int)(percent * 100)}%";
     // }
 
-    private void AllItemsChanged(int obj)
+    private void AllItemsChanged(int amound)
     {
-        LeftText.text = obj.ToString();
+        LeftText.text = amound.ToString();
     }
 
     private async void OnCurrentLevelChanged(int currentLevel)
