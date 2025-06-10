@@ -20,7 +20,7 @@ public class ModelFace : BaseController
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Finish"))
+        if (other.gameObject.CompareTag("DestroyPanel"))
         {
             Destroy(gameObject);
         }
@@ -28,7 +28,7 @@ public class ModelFace : BaseController
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Finish"))
+        if (collision.gameObject.CompareTag("DestroyPanel"))
         {
             Destroy(gameObject);
         }

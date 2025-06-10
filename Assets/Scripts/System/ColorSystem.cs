@@ -2,86 +2,65 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using QFramework;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using Utils;
 
 public class ColorSystem : AbstractSystem
 {
     public Dictionary<ItemColor, Texture> ColorTex = new Dictionary<ItemColor, Texture>();
-
+ 
     public async UniTask LoadTex()
     {
-        if (!ColorTex.ContainsKey(ItemColor.Red))
+        var locationsHandle = Addressables.LoadResourceLocationsAsync("color");
+        await locationsHandle.Task;
+        if (locationsHandle.Status == AsyncOperationStatus.Succeeded)
         {
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Texture>("red");
-            if (obj.Status == AsyncOperationStatus.Succeeded)
+            foreach (var location in locationsHandle.Result)
             {
-                ColorTex.Add(ItemColor.Red, obj.Result);
+                Debug.Log($"Loading asset: {location.PrimaryKey}");
+                
+                // 加载单个资源
+                var loadHandle = Addressables.LoadAssetAsync<Texture>(location);
+                await loadHandle.Task;
+                
+                if (loadHandle.Status == AsyncOperationStatus.Succeeded)
+                {
+                    Debug.Log($"Successfully loaded: {loadHandle.Result}");
+                    // 使用加载的资源...
+                    ColorTex.Add(StringToEnum<ItemColor>(location.PrimaryKey, ItemColor.None),loadHandle.Result);
+                }
+                else
+                {
+                    Debug.LogError($"Failed to load: {location.PrimaryKey}");
+                }
+                
+                Addressables.Release(loadHandle);
             }
         }
-
-        if (!ColorTex.ContainsKey(ItemColor.Blue))
+    }
+    
+    public Texture GetRandomTex()
+    {
+      return  ColorTex[GetRandomEnumValue<ItemColor>()];
+    }
+    
+    public T GetRandomEnumValue<T>()
+    {
+        var values = System.Enum.GetValues(typeof(T));
+        int index = Random.Range(0, values.Length-1);
+        return (T)values.GetValue(index);
+    }
+    
+    public T StringToEnum<T>(string str, T defaultValue = default) where T : struct
+    {
+        if (System.Enum.TryParse<T>(str, true, out var result))
         {
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Texture>("blue");
-            if (obj.Status == AsyncOperationStatus.Succeeded)
-            {
-                ColorTex.Add(ItemColor.Blue, obj.Result);
-            }
+            Debug.Log(str+"  StringToEnum = " + result);
+            return result;
         }
-
-        if (!ColorTex.ContainsKey(ItemColor.Green))
-        {
-
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Texture>("green");
-            if (obj.Status == AsyncOperationStatus.Succeeded)
-            {
-                ColorTex.Add(ItemColor.Green, obj.Result);
-            }
-        }
-
-        if (!ColorTex.ContainsKey(ItemColor.Orange))
-        {
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Texture>("orange");
-            if (obj.Status == AsyncOperationStatus.Succeeded)
-            {
-                ColorTex.Add(ItemColor.Orange, obj.Result);
-            }
-        }
-
-        if (!ColorTex.ContainsKey(ItemColor.Violet))
-        {
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Texture>("purple");
-            if (obj.Status == AsyncOperationStatus.Succeeded)
-            {
-                ColorTex.Add(ItemColor.Violet, obj.Result);
-            }
-        }
-
-        if (!ColorTex.ContainsKey(ItemColor.Yellow))
-        {
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Texture>("yellow");
-            if (obj.Status == AsyncOperationStatus.Succeeded)
-            {
-                ColorTex.Add(ItemColor.Yellow, obj.Result);
-            }
-        }
-
-        if (!ColorTex.ContainsKey(ItemColor.White))
-        {
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Texture>("white");
-            if (obj.Status == AsyncOperationStatus.Succeeded)
-            {
-                ColorTex.Add(ItemColor.White, obj.Result);
-            }
-        }
-        if (!ColorTex.ContainsKey(ItemColor.Black))
-        {
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Texture>("black");
-            if (obj.Status == AsyncOperationStatus.Succeeded)
-            {
-                ColorTex.Add(ItemColor.Black, obj.Result);
-            }
-        }
+        Debug.Log(str+"  StringToEnum = " + defaultValue);
+        return defaultValue;
     }
 
     protected override void OnInit()

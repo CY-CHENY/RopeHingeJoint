@@ -30,9 +30,8 @@ public class SpawnMainUIBrickObjectCommand : AbstractCommand
         if (level > runtimeModel.LevelLegoData.Count) level = runtimeModel.LevelLegoData.Count;
         LevelConfig levelConfig = runtimeModel.LevelLegoData[level];
         
-        await this.GetSystem<ColorSystem>().LoadTex();
-        
-        var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<GameObject>($"Assets/GameResources/Prefabs/Level/{levelConfig.PrefabName}.prefab");
+        var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<GameObject>
+            ($"Assets/GameResources/Prefabs/Level/{int.Parse(levelConfig.PrefabName)+11}.prefab");
         GameObject instance = null;
         if (obj.Status == AsyncOperationStatus.Succeeded)
         {

@@ -17,50 +17,59 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: b7222d1dd19d60742ab61f53d4d83fda
   m_SerializeEntries:
-  - m_GUID: 99dfba40d712543498ea01ffe8fc9333
-    m_Address: black
+  - m_GUID: 0acffc69538d77349b3fc848923e2d46
+    m_Address: Yellow
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 652d599b60f901c40af4acae923ec06e
-    m_Address: blue
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 86934e7e62ea6234b873c2461f52de9f
-    m_Address: green
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e71adaeb426a3384cb06c36b25684fca
-    m_Address: orange
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d70e6a95eefedda48bf71a5cef10bc94
-    m_Address: purple
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3dd97b80f5b044f498e8c8ff2f19d17a
-    m_Address: white
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e660c47b3499aa244bc94392f26ecf7a
-    m_Address: red
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - color
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e4ddf319b703b5c4ba20c72e9640b18d
-    m_Address: wood
+    m_Address: Wood
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - color
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0acffc69538d77349b3fc848923e2d46
-    m_Address: yellow
+  - m_GUID: 3dd97b80f5b044f498e8c8ff2f19d17a
+    m_Address: White
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - color
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e660c47b3499aa244bc94392f26ecf7a
+    m_Address: Red
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - color
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d70e6a95eefedda48bf71a5cef10bc94
+    m_Address: Purple
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - color
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e71adaeb426a3384cb06c36b25684fca
+    m_Address: Orange
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - color
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86934e7e62ea6234b873c2461f52de9f
+    m_Address: Green
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - color
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 652d599b60f901c40af4acae923ec06e
+    m_Address: Blue
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - color
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99dfba40d712543498ea01ffe8fc9333
+    m_Address: Black
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - color
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e55e8459d13053e4f8242e99d1a7365d, type: 2}

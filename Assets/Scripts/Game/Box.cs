@@ -95,8 +95,8 @@ public class Box : MonoBehaviour, IController
                 return nameof(ItemColor.Yellow);
             // case ItemColor.Cyan:
             //     return nameof(ItemColor.Cyan);
-            case ItemColor.Violet:
-                return nameof(ItemColor.Violet);
+            case ItemColor.Purple:
+                return nameof(ItemColor.Purple);
             case ItemColor.Orange:
                 return nameof(ItemColor.Orange);
             case ItemColor.White:

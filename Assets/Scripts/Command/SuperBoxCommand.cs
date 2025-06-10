@@ -37,30 +37,6 @@ public class SuperBoxCommand : AbstractCommand
     private void SuperBox()
     {
         var model = this.GetModel<RuntimeModel>();
-        // int minCount = 3;
-        // BoxData boxData = null;
-        // foreach (var box in model.ActiveBoxes)
-        // {
-        //     if (box.Type == BoxType.Normal && box.CurrentCount < minCount)
-        //     {
-        //         boxData = box;
-        //         minCount = box.CurrentCount;
-        //     }
-        // }
-
-        // if (boxData != null)
-        // {
-        //     var color = boxData.Color;
-        //     var count = 3 - boxData.CurrentCount;
-        //     var takeItems = model.AllItems.Where(item => item.Color == color).Take(count).ToList();
-        //     if (takeItems != null)
-        //     {
-        //         foreach (var item in takeItems)
-        //         {
-        //             this.SendCommand(new TryPlaceItemCommand(item));
-        //         }
-        //     }
-        // }
         int index = model.ActiveBoxes.Count;
         //广告盒子
         var advertisment = model.ActiveBoxes.FirstOrDefault(b => b.Type == BoxType.Advertisement);

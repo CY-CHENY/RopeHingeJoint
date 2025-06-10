@@ -37,10 +37,11 @@ public class MoveToBoxCommand : AbstractCommand
         CoroutineController.Instance.StartCoroutine(StartCollection());
     }
 
+    
     IEnumerator StartCollection()
     {
         var ropeMeshRenderer = rope.GetComponentInChildren<MeshRenderer>();
-        Debug.Log($"绳子颜色:{itemData.Color}");
+        Debug.Log($"木桩收集绳子颜色:{itemData.Color}");
         ropeMeshRenderer.material.color = Util.ColorMapping[itemData.Color];
 
         //大模型中选中的毛线模型
@@ -58,16 +59,16 @@ public class MoveToBoxCommand : AbstractCommand
         // 将屏幕位置转回世界坐标，但使用renderCamera
         Vector3 worldPos1 = mainCamera.ScreenToWorldPoint(
             new Vector3(screenPos1.x, screenPos1.y, mainCamera.nearClipPlane + 1));
-
         //从模型到盒子
         var start = worldPos1;//wool.transform.position;
-        var end = new Vector3(wood.transform.position.x, wood.transform.position.y, wood.transform.position.z - 0.5f);
+        var position = wood.transform.position;
+        var end = new Vector3(position.x, position.y, position.z - 0.5f);
         //先从起点附近延长到终点
         Vector3 dir = end - start;
         Vector3 end2 = start + dir.normalized * 0.5f;
 
        // rope.gameObject.SetActive(true);
-        var end3 = new Vector3(wood.transform.position.x, wood.transform.position.y, wood.transform.position.z - 0.5f);
+        var end3 = new Vector3(position.x, position.y, position.z - 0.5f);
         //Debug.Log($"start:{start} end:{end3}");
 
         dissolve.StartDissolve(0.9f, up, (pos) =>
@@ -90,7 +91,7 @@ public class MoveToBoxCommand : AbstractCommand
         yield return new WaitForSeconds(0.2f);
         float offset = 0.015f;
         //显示毛线圈2
-        var pos = wood.transform.position;
+        var pos = position;
         rope.UpdateEnd(new Vector3(pos.x, pos.y, pos.z - 0.5f));
         var torus = wood.transform.GetChild(0).GetChild(0).Find("pTorus2");
         if (torus != null)

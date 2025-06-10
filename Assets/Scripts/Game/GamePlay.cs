@@ -9,8 +9,6 @@ using Utils;
 
 public class GamePlay : BaseController
 {
-    //public Block[] listBlock;
-
     public Transform collectBoxParent;
     public Transform spareBlockParent;
 
@@ -20,11 +18,6 @@ public class GamePlay : BaseController
     public GameObject CollectLegoPrefab;
     public GameObject BlockPrefab;
 
-    // public LegoData[] legoDatas;
-    // public ColorMaterialData[] colorMaterialDatas;
-
-    // public LegoDataSO legoDataSO;
-    // public ColorMaterialSO colorMaterialSO;
     public Vector3 LegoSpawnPos;
     void Awake()
     {
@@ -121,21 +114,10 @@ public class GamePlay : BaseController
         }
     }
 
-    private void OnSpareItemsAdded(int index, ItemData data)
-    {
-        // Block block = listBlock[index];
-        // data.ItemTransform.LocalPositionX(block.transform.position.x);
-        // data.ItemTransform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-        // data.ItemTransform.DOMove(block.transform.position, 0.3f)
-        // .OnComplete(() =>
-        // {
-        //     block.SetLego(data.ItemTransform.gameObject);
-        // });
-    }
 
     private void OnActiveBoxAdded(int index, BoxData data)
     {
-        Debug.Log("OnActiveBoxAdded");
+        Debug.Log($"----生成一个盒子---index ={index} , Color = {data.Color} , type = {data.Type}");
         data.BoxTransform.SetParent(collectBoxParent);
         data.BoxTransform.SetSiblingIndex(index);
         data.BoxTransform.localScale = new Vector3(0.2f, 0.2f, 0.2f);

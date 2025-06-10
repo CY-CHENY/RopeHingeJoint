@@ -18,8 +18,6 @@ public class ModelManager : MonoBehaviour, IController
     }
     Dictionary<string, Transform> group = new Dictionary<string, Transform>();
 
-    List<Transform> current = new List<Transform>();
-    
     
     public async UniTask InitModel()
     {
@@ -33,6 +31,8 @@ public class ModelManager : MonoBehaviour, IController
         }
         
         //初始化主干
+        transform.Find("mainBody").GetOrAddComponent<Rigidbody>().isKinematic = true;
+        transform.Find("mainBody").GetOrAddComponent<BoxCollider>();
         for (int i = 0; i < transform.Find("mainBody").childCount; i++)
         {
             Transform child = transform.Find("mainBody").GetChild(i);
@@ -40,73 +40,62 @@ public class ModelManager : MonoBehaviour, IController
             child.GetOrAddComponent<BoxCollider>().isTrigger = false;
         }
         
-        Rigidbody mainRigidBody = transform.Find("mainBody").GetComponent<Rigidbody>();
-        Dictionary<int, Rigidbody> DicRopeRigid = new Dictionary<int, Rigidbody>();
-        Dictionary<int, Rigidbody> DicFaceRigid = new Dictionary<int, Rigidbody>();
+        var mainRigidBody = transform.Find("mainBody").GetComponent<Rigidbody>();
+        var dicRopeRigid = new Dictionary<int, Rigidbody>();
+        var dicFaceRigid = new Dictionary<int, Rigidbody>();
         //初始化面
         for (int i = 0; i < transform.Find("Face").childCount; i++)
         {
             Transform child = transform.Find("Face").GetChild(i);
-          //  HingeJoint childJoint = child.GetOrAddComponent<HingeJoint>();
             child.GetOrAddComponent<Rigidbody>().drag = 8;
+            child.GetOrAddComponent<BoxCollider>().isTrigger = true;
             if (child.name.Contains("rope"))
             {
                 string[] index = child.name.Split('_');
-                DicRopeRigid.Add(int.Parse(index[1]),child.GetComponent<Rigidbody>());
+                dicRopeRigid.Add(int.Parse(index[1]),child.GetComponent<Rigidbody>());
             } 
             if (child.name.Contains("face"))
             {
                 string[] index = child.name.Split('_');
-                DicFaceRigid.Add(int.Parse(index[1]),child.GetComponent<Rigidbody>());
-       
+                dicFaceRigid.Add(int.Parse(index[1]),child.GetComponent<Rigidbody>());
             }
-            MeshRenderer meshRenderer = child.GetComponent<MeshRenderer>();
-            Log.Debug("meshRenderer = "+meshRenderer);
+            var meshRenderer = child.GetComponent<MeshRenderer>();
+            //Log.Debug("meshRenderer = "+meshRenderer);
             // Debug.Log(meshRenderer.material.name);
                 //渲染节点
-                current.Add(child);
-
                 var color = meshRenderer.material.color;
                 ItemColor itemColor = Util.FindClosestColor(color);
                 //只把绳子加进可以消除
                 if (child.name.Contains("rope"))
                 {
-                    Debug.Log(child.name);
-                    model.AllItems.Add(new ItemData { Color = itemColor, ItemTransform = child });
-                }
-                if (itemColor != ItemColor.None)
-                {
-                    meshRenderer.material = Instantiate(material);
-                    //meshRenderer.material.SetColor("_BaseColor", Util.ColorMapping[itemColor]);
-                    meshRenderer.material.SetTexture("_BaseMap", this.GetSystem<ColorSystem>().ColorTex[itemColor]);
-                    if (meshRenderer.material.HasProperty("_DissolveOffest"))
+                    model.AllItems.Add(new ItemData {Color = itemColor, ItemTransform = child});
+                    //渲染绳子
+                    if (itemColor != ItemColor.None)
                     {
-                        // 获取模型的局部包围盒
-                        Bounds bounds = meshRenderer.localBounds;
-                        //float centerY = bounds.center.y;
-                        // float top = (bounds.size.y - 1.0f) / 2.0f + 1.0f - centerY;
-                        float top = bounds.max.y + 0.5f;
-                        top = Mathf.Ceil(top * 100);
-                        top /= 100;
-                        // Debug.Log($"top:{top} maxY:{bounds.max.y}");
-                        meshRenderer.material.SetVector("_DissolveOffest", new Vector4(0, top, 0));
+                        meshRenderer.material = Instantiate(material);
+                        meshRenderer.material.SetTexture("_BaseMap", this.GetSystem<ColorSystem>().ColorTex[itemColor]);
+                        if (meshRenderer.material.HasProperty("_DissolveOffest"))
+                        {
+                            // 获取模型的局部包围盒
+                            Bounds bounds = meshRenderer.localBounds;
+                            float top = bounds.max.y + 0.5f;
+                            top = Mathf.Ceil(top * 100);
+                            top /= 100;
+                            meshRenderer.material.SetVector("_DissolveOffest", new Vector4(0, top, 0));
+                        }
                     }
                 }
-            
+                else if (child.name.Contains("face"))
+                {
+                    meshRenderer.material = Instantiate(material);
+                    meshRenderer.material.SetTexture("_BaseMap", this.GetSystem<ColorSystem>().GetRandomTex());
+                }
+
         }
 
-        foreach (var obj in current)
+        foreach (var v in dicRopeRigid)
         {
-            //Debug.Log($"首次渲染节点:{obj.name}");
-            //obj.AddComponent<MeshCollider>();
-            //collider.convex = true;
-            obj.GetOrAddComponent<BoxCollider>();
-            obj.GetComponent<BoxCollider>().isTrigger = true;
-        }
-
-        foreach (var v in DicRopeRigid)
-        {
-            HingeJoint hingeJoint = v.Value.AddComponent<HingeJoint>();
+            HingeJoint hingeJoint = v.Value.GetOrAddComponent<HingeJoint>();
             hingeJoint.connectedBody = mainRigidBody;
             hingeJoint.useLimits = true;
             hingeJoint.limits = new JointLimits {
@@ -125,10 +114,10 @@ public class ModelManager : MonoBehaviour, IController
             hingeJoint.GetOrAddComponent<ModelRope>();
         }
         
-        foreach (var v in DicFaceRigid)
+        foreach (var v in dicFaceRigid)
         {
-            HingeJoint hingeJoint = v.Value.AddComponent<HingeJoint>();
-            hingeJoint.connectedBody = DicRopeRigid[v.Key];
+            HingeJoint hingeJoint = v.Value.GetOrAddComponent<HingeJoint>();
+            hingeJoint.connectedBody = dicRopeRigid[v.Key];
             hingeJoint.useLimits = true;
             hingeJoint.limits = new JointLimits {
                 min = -30,  // 最小角度
@@ -161,7 +150,7 @@ public class ModelManager : MonoBehaviour, IController
         if (zhuangshi != null)
         {
             zhuangshi.transform.SetParent(null);
-            var rb = zhuangshi.AddComponent<Rigidbody>();
+            var rb = zhuangshi.GetOrAddComponent<Rigidbody>();
             rb.AddForce(zhuangshi.forward);
             Util.DelayExecuteWithSecond(3f, () =>
             {
@@ -190,7 +179,7 @@ public class ModelManager : MonoBehaviour, IController
                 next.localScale = new Vector3(0.9f, 0.9f, 0.9f);
                 next.DOScale(new Vector3(1.0f, 1.0f, 1.0f), 0.1f).SetDelay(1f).OnComplete(() =>
                 {
-                    next.AddComponent<MeshCollider>();
+                    next.GetOrAddComponent<MeshCollider>();
                 });
                 next.gameObject.SetActive(true);
             }

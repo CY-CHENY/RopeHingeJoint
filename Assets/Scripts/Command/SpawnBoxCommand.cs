@@ -21,7 +21,6 @@ public class SpawnBoxCommand : AbstractCommand<BoxData>
         box.SetData(data);
 
         this.GetModel<RuntimeModel>().ActiveBoxes.Insert(index, data);
-
         return data;
     }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: d57ec4642bfbd3242b119bbbc1fab7e7
   m_currentHash:
     serializedVersion: 2
-    Hash: 78871debaaaac87343108df2822c63aa
+    Hash: 9e2ae15e2dd64e9a0e1ca00f55b3b030
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
@@ -97,6 +97,8 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - png
+    - luban
+    - color
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 8f521b2a0b54f124aa2610f585803e01, type: 2}

@@ -31,7 +31,7 @@ public class SpawnBrickObjectCommand : AbstractCommand
         int level = runtimeModel.CurrentLevel.Value;
         LevelConfig levelConfig = ConfigSystem.GetTable().TbLevelConfig.Get(level);//runtimeModel.LevelLegoData[level]);
 
-        await this.GetSystem<ColorSystem>().LoadTex();
+        //await this.GetSystem<ColorSystem>().LoadTex();
 
         var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<GameObject>
             ($"Assets/GameResources/Prefabs/Level/{int.Parse(levelConfig.PrefabName)+11}.prefab");
@@ -45,6 +45,7 @@ public class SpawnBrickObjectCommand : AbstractCommand
         instance.AddComponent<MBrick>();
         await instance.AddComponent<ModelManager>().InitModel();
 
+        //盒子初始化
         var boxObj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<LevelConfigSO>
             ($"Assets/GameResources/Datas/{levelConfig.BoxConfig}.asset");
         List<int> configBox = new List<int>();
@@ -52,14 +53,14 @@ public class SpawnBrickObjectCommand : AbstractCommand
         {
             configBox.AddRange(boxObj.Result.boxPool);
         }
-
         foreach (var nColor in configBox)
         {
             runtimeModel.BoxPool.Add(new BoxData() { Type = BoxType.Normal, Color = (ItemColor)nColor, CurrentCount = 0 });
         }
+        
 
         Debug.Log($"总共{runtimeModel.AllItems.Count}个模型");
-        PrepareColor(level);
+        PrepareColor();
         await PrepareBox();
         SetColorToModel();
 
@@ -77,7 +78,7 @@ public class SpawnBrickObjectCommand : AbstractCommand
         this.SendEvent(new BrickObjectSpawnedEvent() { Instnace = instance });
     }
 
-    void PrepareColor(int level)
+    void PrepareColor()
     {
         var model = this.GetModel<RuntimeModel>();
         //配置文档中盒子出现的颜色就是本关所需要的所有颜色
@@ -116,12 +117,14 @@ public class SpawnBrickObjectCommand : AbstractCommand
         model.TotalBox.Value = boxCount;
 
         var uncoloredModels = model.AllItems.Where(i => i.Color == ItemColor.None).ToList();
+        
         //已经全部分配颜色了 盒子也要相应的配置完成
-        if (uncoloredModels == null || uncoloredModels.Count <= 0)
+        if (uncoloredModels.Count <= 0)
         {
             return;
         }
-
+        
+        //有没有颜色的方块就需要随机给他上色
         Util.ShuffleList(uncoloredModels);
 
         if (uncoloredModels.Count % 3 != 0)

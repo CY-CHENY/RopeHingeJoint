@@ -29,7 +29,7 @@ public class MeshRendererCounter : EditorWindow
        // { ItemColor.Cyan,  new Color(255/255.0f, 252 / 255f, 8/255f) },
 
         { ItemColor.Orange,  new Color(255/255.0f, 145 / 255f, 16/255f) },
-        { ItemColor.Violet,  new Color(214/255.0f, 102 / 255f, 255/255f) },
+        { ItemColor.Purple,  new Color(214/255.0f, 102 / 255f, 255/255f) },
 
         { ItemColor.Yellow,  new Color(255/255.0f, 252 / 255f, 8/255f) },
 

@@ -19,17 +19,11 @@ public class HorizontalLayout : MonoBehaviour
 
     private void OnEnable()
     {
-// #if UNITY_EDITOR
-//         EditorApplication.hierarchyChanged += UpdateLayoutIfNeeded;
-// #endif
         UpdateLayout();
     }
 
     void OnDisable()
     {
-// #if UNITY_EDITOR
-//         EditorApplication.hierarchyChanged -= UpdateLayoutIfNeeded;
-// #endif
     }
 
     void OnValidate()

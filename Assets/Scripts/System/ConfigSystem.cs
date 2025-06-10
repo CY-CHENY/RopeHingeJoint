@@ -40,7 +40,7 @@ public class ConfigSystem : AbstractSystem
         //Luban初始化
         Dictionary<string, string> dicData = new Dictionary<string, string>();
         // Debug.Log(DataUtility.GetTable().TbTest.DataList.Count);
-        var locationsHandle = Addressables.LoadResourceLocationsAsync("default");
+        var locationsHandle = Addressables.LoadResourceLocationsAsync("luban");
         await locationsHandle.Task;
         if (locationsHandle.Status == AsyncOperationStatus.Succeeded)
         {
@@ -70,7 +70,7 @@ public class ConfigSystem : AbstractSystem
         tables = new Tables((b) => { return JSON.Parse(dicData[b]); });
         // 现在可以用 tempTable 访问数据了
         Log.Debug("------luban加载完成-------"+GetTable().TbPlayer.DataList.Count);
-    }
+    }  
 
     public async UniTask<Sprite> GetPropSprite(int id)
     {

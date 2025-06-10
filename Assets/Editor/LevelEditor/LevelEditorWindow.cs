@@ -116,7 +116,7 @@ public class PrefabViewerWindow : EditorWindow
         ColorTex.Add(ItemColor.Blue, AssetDatabase.LoadAssetAtPath<Texture>(prefix + "blue.png"));
         ColorTex.Add(ItemColor.Green, AssetDatabase.LoadAssetAtPath<Texture>(prefix + "green.png"));
         ColorTex.Add(ItemColor.Orange, AssetDatabase.LoadAssetAtPath<Texture>(prefix + "orange.png"));
-        ColorTex.Add(ItemColor.Violet, AssetDatabase.LoadAssetAtPath<Texture>(prefix + "purple.png"));
+        ColorTex.Add(ItemColor.Purple, AssetDatabase.LoadAssetAtPath<Texture>(prefix + "purple.png"));
         ColorTex.Add(ItemColor.Yellow, AssetDatabase.LoadAssetAtPath<Texture>(prefix + "yellow.png"));
         ColorTex.Add(ItemColor.White, AssetDatabase.LoadAssetAtPath<Texture>(prefix + "white.png"));
         ColorTex.Add(ItemColor.Black, AssetDatabase.LoadAssetAtPath<Texture>(prefix + "black.png"));
@@ -1484,7 +1484,7 @@ public class PrefabViewerWindow : EditorWindow
                 return "绿色";
             case ItemColor.Orange:
                 return "橙色";
-            case ItemColor.Violet:
+            case ItemColor.Purple:
                 return "紫色";
             case ItemColor.Yellow:
                 return "黄色";

@@ -21,31 +21,31 @@ MonoBehaviour:
     m_Address: tbplayer
     m_ReadOnly: 0
     m_SerializedLabels:
-    - default
+    - luban
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 246517e20a288ba4bb885660795422e6
     m_Address: tbtest
     m_ReadOnly: 0
     m_SerializedLabels:
-    - default
+    - luban
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 43b1069f4cfc8a64c823ea6b04e762b2
     m_Address: tbtesta
     m_ReadOnly: 0
     m_SerializedLabels:
-    - default
+    - luban
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c99d1fdf97cace045899a75f7b516166
     m_Address: tbtestenum
     m_ReadOnly: 0
     m_SerializedLabels:
-    - default
+    - luban
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2e0e015d6072fea448a3ff555bdd985f
     m_Address: tblevelconfig
     m_ReadOnly: 0
     m_SerializedLabels:
-    - default
+    - luban
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e55e8459d13053e4f8242e99d1a7365d, type: 2}

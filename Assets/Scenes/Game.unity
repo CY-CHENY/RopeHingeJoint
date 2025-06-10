@@ -1359,7 +1359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &890756060
 Transform:
   m_ObjectHideFlags: 0
@@ -2923,9 +2923,9 @@ GameObject:
   - component: {fileID: 1638810377}
   - component: {fileID: 1638810376}
   - component: {fileID: 1638810375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
-  m_TagString: Finish
+  m_TagString: DestroyPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
