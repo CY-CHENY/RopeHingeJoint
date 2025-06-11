@@ -15,16 +15,20 @@ namespace cfg
 public partial class Tables
 {
     public TbTest TbTest {get; }
+    public TbItemConfig TbItemConfig {get; }
     public TbLevelConfig TbLevelConfig {get; }
     public TbPlayer TbPlayer {get; }
+    public TbSingInConfig TbSingInConfig {get; }
     public TbTestA TbTestA {get; }
     public TbTestEnum TbTestEnum {get; }
 
     public Tables(System.Func<string, JSONNode> loader)
     {
         TbTest = new TbTest(loader("tbtest"));
+        TbItemConfig = new TbItemConfig(loader("tbitemconfig"));
         TbLevelConfig = new TbLevelConfig(loader("tblevelconfig"));
         TbPlayer = new TbPlayer(loader("tbplayer"));
+        TbSingInConfig = new TbSingInConfig(loader("tbsinginconfig"));
         TbTestA = new TbTestA(loader("tbtesta"));
         TbTestEnum = new TbTestEnum(loader("tbtestenum"));
         ResolveRef();
@@ -33,8 +37,10 @@ public partial class Tables
     private void ResolveRef()
     {
         TbTest.ResolveRef(this);
+        TbItemConfig.ResolveRef(this);
         TbLevelConfig.ResolveRef(this);
         TbPlayer.ResolveRef(this);
+        TbSingInConfig.ResolveRef(this);
         TbTestA.ResolveRef(this);
         TbTestEnum.ResolveRef(this);
     }

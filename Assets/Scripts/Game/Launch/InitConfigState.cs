@@ -8,6 +8,7 @@ public class InitConfigState : AbstractState<LaunchStates, Launch>, IController
 
     protected override async void OnEnter()
     {
+        Log.Debug("xxxxxxxxxxConfigSystemxxxxxxxx");
         await this.GetSystem<ConfigSystem>().LoadConfig();
         await this.GetSystem<ColorSystem>().LoadTex();
         mFSM.ChangeState(LaunchStates.InitGameConfig);

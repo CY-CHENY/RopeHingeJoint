@@ -82,6 +82,11 @@ public struct ClickModelEvent
     public Transform transform;
 }
 
+public struct LegoRaiseEvent
+{
+    
+}
+
 public struct RopeCreatedEvent
 {
     public Vector3 StartPoint;

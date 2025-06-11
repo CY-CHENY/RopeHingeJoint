@@ -34,60 +34,56 @@ public class MoveToBoxCommand : AbstractCommand
         box = boxData.BoxTransform.GetComponent<Box>();
         //收集毛线的木桩
         wood = await box.CreateSlot(itemData.Color);
-        CoroutineController.Instance.StartCoroutine(StartCollection());
+        CoroutineController.Instance.StartCoroutine(StartCollecting());
     }
 
     
-    IEnumerator StartCollection()
+    IEnumerator StartCollecting()
     {
         var ropeMeshRenderer = rope.GetComponentInChildren<MeshRenderer>();
         Debug.Log($"木桩收集绳子颜色:{itemData.Color}");
         ropeMeshRenderer.material.color = Util.ColorMapping[itemData.Color];
 
-        //大模型中选中的毛线模型
+        //目标模型
         Transform wool = itemData.ItemTransform;
         wool.gameObject.SetActive(true);
         yield return null;
-        //Debug.Log("name:" + wool.name);
         var dissolve = wool.AddComponent<DissolveController>();
         dissolve.InitCtl();
         yield return null;
         
         Camera mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         Camera modelCamera = GameObject.FindWithTag("ModelCamera").GetComponent<Camera>();
+        Debug.Log($"mainCamera = {mainCamera.depth} , modelCamera = {modelCamera.depth}");
         Vector3 screenPos1 = modelCamera.WorldToScreenPoint(wool.transform.position);
         // 将屏幕位置转回世界坐标，但使用renderCamera
         Vector3 worldPos1 = mainCamera.ScreenToWorldPoint(
             new Vector3(screenPos1.x, screenPos1.y, mainCamera.nearClipPlane + 1));
         //从模型到盒子
-        var start = worldPos1;//wool.transform.position;
-        var position = wood.transform.position;
+        var start = worldPos1;//模型位置
+        var position = wood.transform.position;//木桩位置
         var end = new Vector3(position.x, position.y, position.z - 0.5f);
         //先从起点附近延长到终点
         Vector3 dir = end - start;
         Vector3 end2 = start + dir.normalized * 0.5f;
 
-       // rope.gameObject.SetActive(true);
-        var end3 = new Vector3(position.x, position.y, position.z - 0.5f);
-        //Debug.Log($"start:{start} end:{end3}");
-
-        dissolve.StartDissolve(0.9f, up, (pos) =>
+        dissolve.StartDissolve(0.9f, up, (vector3) =>
         {
             if (!rope.gameObject.activeSelf)
             {
                 rope.gameObject.SetActive(true);
-                rope.UpdatePoint(pos, end2);
+                rope.UpdatePoint(vector3, end2);
                 DOTween.To(() => end2, x =>
                             {
                                 //Debug.Log(x);
                                 end2 = x;
                                 rope.UpdateEnd(x);
-                            }, end3, 0.2f);
+                            }, end, 0.2f);
             }
-            rope.UpdateStart(pos);
+            rope.UpdateStart(vector3);
         });
 
-        this.GetSystem<VibrateSystem>().VibrateShort();
+        this.GetSystem<VibrateSystem>().VibrateShort();//手机抖动
         yield return new WaitForSeconds(0.2f);
         float offset = 0.015f;
         //显示毛线圈2
@@ -178,6 +174,7 @@ public class MoveToBoxCommand : AbstractCommand
             this.SendCommand(new ProcessFullBoxCommand(boxData));
         }
 
+        this.SendCommand(new CheckLegoRaiseCommand());
         yield return null;
     }
 }

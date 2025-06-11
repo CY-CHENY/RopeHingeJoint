@@ -42,24 +42,6 @@ namespace Utils
         { ItemColor.Black,      new Color(89f/255.0f,   89f / 255f,     89f / 255f) },
     };
 
-        public static List<SignInEntity> SignInConfig = new List<SignInEntity>()
-        {
-            new SignInEntity(){Id = 1,Type = "1000;1"},
-            new SignInEntity(){Id = 2,Type = "1001;1"},
-            new SignInEntity(){Id = 3,Type = "1002;1"},
-            new SignInEntity(){Id = 4,Type = "1000;2"},
-            new SignInEntity(){Id = 5,Type = "1001;2"},
-            new SignInEntity(){Id = 6,Type = "1002;2"},
-            new SignInEntity(){Id = 7,Type = "1000;5|1001;5|1002;5"},
-        };
-
-        public static List<ItemEntity> ItemConfig = new List<ItemEntity>()
-        {
-            new ItemEntity() {Id = 1000, Name = "加孔", Type = "增加一个孔位", iconPath = "item1000"},
-            new ItemEntity() {Id = 1001, Name = "清理", Type = "清理待清除的所有毛线", iconPath = "item1001"},
-            new ItemEntity() {Id = 1002, Name = "超级盒子", Type = "立即填满一个盒子", iconPath = "item1002"},
-        };
-
         public static List<PropBase> CollectGameAward = new List<PropBase>()
         {
             new PropBase(id: 1000, amount: 1),

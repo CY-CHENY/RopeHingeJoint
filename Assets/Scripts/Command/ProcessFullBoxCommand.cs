@@ -35,7 +35,8 @@ public class ProcessFullBoxCommand : AbstractCommand
 
         if (box.Type == BoxType.Normal)
         {
-            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>($"Assets/GameResources/Sprites/Box/{Box.GetFileName(box.Color)}1.png");
+            var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>
+                ($"Assets/GameResources/Sprites/Box/{Box.GetFileName(box.Color)}1.png");
             if (obj.Status == AsyncOperationStatus.Succeeded)
             {
                 coverPrefab = obj.Result;

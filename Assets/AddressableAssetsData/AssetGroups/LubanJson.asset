@@ -47,6 +47,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - luban
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6b3cdcd5a81e2c4faa4c6713c778a5e
+    m_Address: tbitemconfig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - luban
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d08695c6f8a3e34e9711d0ed535fc55
+    m_Address: tbsinginconfig
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - luban
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e55e8459d13053e4f8242e99d1a7365d, type: 2}
   m_SchemaSet:

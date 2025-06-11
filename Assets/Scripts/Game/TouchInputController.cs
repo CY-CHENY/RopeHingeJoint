@@ -107,20 +107,15 @@ public class TouchInputController : MonoBehaviour, IController
         return EventSystem.current.IsPointerOverGameObject();
     }
 
-    bool IsTouchOnUI(Touch touch)
-    {
-        return EventSystem.current.IsPointerOverGameObject(touch.fingerId);
-    }
-
     private void HandleClick(Vector2 position)
     {
         int layerMask = LayerMask.GetMask("Default");
       
         Ray ray2 = mainCamera.ScreenPointToRay(position);
         RaycastHit hit2;
-        if (Physics.Raycast(ray2, out hit2, 100))
+        if (Physics.Raycast(ray2, out hit2, 100,layerMask))
         {
-            Debug.Log("---mainCamera--Hit----- " + hit2.collider.gameObject.name);
+            Debug.Log("---main Camera--Hit----- " + hit2.collider.gameObject.name);
             if (hit2.collider.gameObject.GetComponent<Box>() != null)//解锁盒子
             {
                 this.SendCommand(new UnlockBoxCommand(hit2.collider.gameObject));
@@ -134,13 +129,11 @@ public class TouchInputController : MonoBehaviour, IController
         if (Physics.Raycast(ray, out hit, 100,layerMask2))
         {
             this.GetSystem<AudioSystem>().PlaySingleSound("dianji");
-            Debug.Log("---modelCamera--Hit----- " + hit.collider.gameObject.name);
+            Debug.Log("---lego Camera--Hit----- " + hit.collider.gameObject.name);
             var model = this.GetModel<RuntimeModel>();
             var item = model.AllItems.FirstOrDefault(i => i.ItemTransform == hit.transform);
             if (item != null)
             {
-                // Destroy(hit.collider);
-                var localPos = hit.transform.InverseTransformPoint(hit.point);
                 this.SendCommand(new TryPlaceItemCommand(item, IsModelVerticalByBounds(hit.collider.gameObject)));
             }
         }

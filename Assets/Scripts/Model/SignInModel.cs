@@ -10,12 +10,9 @@ public class SignInModel : AbstractModel
     public BindableProperty<int> signInDays = new BindableProperty<int>();
     public BindableProperty<string> lastSignInDate = new BindableProperty<string>();
     public BindableProperty<bool> signedToday = new BindableProperty<bool>();
-    public List<SignInEntity> SignInConfig { get; set; }
     protected override void OnInit()
     {
         var storage = this.GetUtility<PlayerPrefsStorage>();
-        SignInConfig = Util.SignInConfig;
-        InitSignInConfig();
 #if UNITY_EDITOR
         //清空签到数据
         // storage.SaveString(nameof(lastSignInDate), "");
@@ -49,19 +46,17 @@ public class SignInModel : AbstractModel
     void InitSignInConfig()
     {
         List<SignInData> data = new List<SignInData>();
-       
-        for (int i = 0; i < SignInConfig.Count; i++)
+        var singInConfig = ConfigSystem.GetTable().TbSingInConfig.DataList;
+        for (int i = 0; i < singInConfig.Count; i++)
         {
             SignInData _data = new SignInData();
-            _data.signInDay = SignInConfig[i].Id;
-            string[] props= SignInConfig[i].Type.Split('|');
-            for (int j = 0; j < props.Length; j++)
+            _data.signInDay = singInConfig[i].Id;
+            foreach (var v in singInConfig[i].Type)
             {
-                string[] propInfo = props[j].Split(';');
-                PropBase @base = new PropBase();
-                @base.id = int.Parse(propInfo[0]);
-                @base.amount = int.Parse(propInfo[1]);
-                _data.rewards.Add(@base);
+                PropBase propBase = new PropBase();
+                propBase.id = v.Key;
+                propBase.amount = v.Value;
+                _data.rewards.Add(propBase);
             }
             data.Add(_data);
         }
@@ -70,6 +65,7 @@ public class SignInModel : AbstractModel
 
     public SignInData GetSignInData(int day)
     {
+        if (signInData == null) InitSignInConfig();
         return signInData.Find(v => v.signInDay == day);
     }
     
@@ -80,5 +76,5 @@ public class SignInModel : AbstractModel
         public List<PropBase> rewards = new List<PropBase>();
     }
 
-    public List<SignInData> signInData;
+     List<SignInData> signInData;
 }

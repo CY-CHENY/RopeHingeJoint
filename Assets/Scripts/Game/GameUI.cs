@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using cfg;
 using DG.Tweening;
@@ -39,6 +40,13 @@ public class GameUI : MonoBehaviour, IController
     private int maxLevel = 0;
 
     public Image imgLight;
+
+
+    // private void Awake()
+    // {
+    //     Camera mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+    //     mainCamera.depth = 1;
+    // }
 
     public IArchitecture GetArchitecture()
     {
@@ -242,6 +250,7 @@ public class GameUI : MonoBehaviour, IController
 
     private void OnBrickObjectSpawned(BrickObjectSpawnedEvent evt)
     {
+        this.SendCommand<ResetModelCameraSizeCommand>();
         PercenSlider.value = 0.0f;
         PercentText.text = "0%";
     }

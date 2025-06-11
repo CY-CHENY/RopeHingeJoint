@@ -34,10 +34,10 @@ public class MoveToSpareCommand : AbstractCommand
         //收集毛线的木桩
         block = await blockData.Block.CreateSlot(item.Color);
 
-        CoroutineController.Instance.StartCoroutine(StartCollection());
+        CoroutineController.Instance.StartCoroutine(StartCollecting());
     }
 
-    private IEnumerator StartCollection()
+    private IEnumerator StartCollecting()
     {
         var ropeMeshRenderer = rope.GetComponentInChildren<MeshRenderer>();
         Debug.Log($"绳子颜色:{item.Color}");
@@ -51,7 +51,6 @@ public class MoveToSpareCommand : AbstractCommand
         dissolve.InitCtl();
         yield return null;
         blockData.Item = new ItemData() { Color = item.Color, ItemTransform = block.transform };
-
         
         Camera mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         Camera modelCamera = GameObject.FindWithTag("ModelCamera").GetComponent<Camera>();
@@ -62,13 +61,12 @@ public class MoveToSpareCommand : AbstractCommand
         //从模型到备用区
         var start = worldPos1;
         //Debug.Log($"wool.position = {wool.transform.position} , worldPos1 = {worldPos1} ,screenPos1 = {screenPos1}");
-        var end = new Vector3(block.transform.position.x, block.transform.position.y, block.transform.position.z - 0.5f);
+        var position = block.transform.position;
+        var end = new Vector3(position.x, position.y, position.z - 0.5f);
         //先从起点附近延长到终点
         Vector3 dir = end - start;
         Vector3 end2 = start + dir.normalized * 0.5f;
 
-
-        var end3 = new Vector3(block.transform.position.x, block.transform.position.y, block.transform.position.z - 0.5f);
         //Debug.Log($"start:{start} end:{end3}");
 
 
@@ -83,7 +81,7 @@ public class MoveToSpareCommand : AbstractCommand
                         //Debug.Log(x);
                         end2 = x;
                         rope.UpdatePoint(start, x);
-                    }, end3, 0.2f);
+                    }, end, 0.2f);
             }
 
             rope.UpdateStart(pos);
@@ -94,7 +92,7 @@ public class MoveToSpareCommand : AbstractCommand
 
         float offset = 0.015f;
         //显示毛线圈2
-        var pos = block.transform.position;
+        var pos = position;
         rope.UpdateEnd(new Vector3(pos.x, pos.y, pos.z - 0.5f));
         var torus = block.transform.GetChild(0).GetChild(0).Find("pTorus2");
         if (torus != null)
@@ -159,6 +157,7 @@ public class MoveToSpareCommand : AbstractCommand
         yield return new WaitForSeconds(0.2f);
 
         this.SendEvent<ItemToSparEvent>();
+        this.SendCommand<CheckLegoRaiseCommand>();
         Debug.Log("移动到备用区结束");
     }
 }

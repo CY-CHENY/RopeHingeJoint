@@ -141,6 +141,12 @@ public class ModelManager : MonoBehaviour, IController
     void Start()
     {
         this.RegisterEvent<ClickModelEvent>(OnModeClicked).UnRegisterWhenGameObjectDestroyed(gameObject);
+        this.RegisterEvent<LegoRaiseEvent>(OnCheckLegoRaise).UnRegisterWhenGameObjectDestroyed(gameObject);
+    }
+
+    private void OnCheckLegoRaise(LegoRaiseEvent obj)
+    {
+        Debug.Log("抬高模型");
     }
 
     private void OnModeClicked(ClickModelEvent evt)

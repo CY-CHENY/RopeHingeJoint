@@ -58,12 +58,29 @@ public class SpawnBrickObjectCommand : AbstractCommand
         {
             runtimeModel.BoxPool.Add(new BoxData() { Type = BoxType.Normal, Color = (ItemColor)nColor, CurrentCount = 0 });
         }
+
+
+        Dictionary<ItemColor, int> dicColor = new Dictionary<ItemColor, int>();
         
         StringBuilder strb = new StringBuilder();
         for (int i = 0; i < runtimeModel.AllItems.Count; i++)
         {
-            strb.Append(runtimeModel.AllItems[i].Color + ", ");
+            if (dicColor.ContainsKey(runtimeModel.AllItems[i].Color))
+            {
+                dicColor[runtimeModel.AllItems[i].Color] += 1;
+            }
+            else
+            {
+                dicColor.Add(runtimeModel.AllItems[i].Color,1);
+            }
+           
         }
+
+        foreach (var v in dicColor)
+        {
+            strb.Append(v.Key + "x"+v.Value+" , ");
+        }
+
 
         Debug.Log($"总共{runtimeModel.AllItems.Count}个绳子可收集 绳子颜色 = {strb}");
         PrepareColor();

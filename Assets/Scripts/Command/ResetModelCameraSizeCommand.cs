@@ -7,6 +7,6 @@ public class ResetModelCameraSizeCommand : AbstractCommand
     protected override void OnExecute()
     {
         Camera modelCamera = GameObject.FindWithTag("ModelCamera").GetComponent<Camera>();
-        modelCamera.DOOrthoSize(5,0.3f);
+        modelCamera.DOOrthoSize(7,0.3f);
     }
 }

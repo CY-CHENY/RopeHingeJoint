@@ -17,7 +17,6 @@ public class ConfigSystem : AbstractSystem
 
     public LegoDataSO LegoConfig { get; set; }
     
-    public List<ItemEntity> ItemConfig { get; set; }
 
     public ColorMaterialSO ColorConfig {get; set;}
      
@@ -36,7 +35,6 @@ public class ConfigSystem : AbstractSystem
 
     public async UniTask LoadConfig()
     {
-        ItemConfig = Util.ItemConfig;
         //Luban初始化
         Dictionary<string, string> dicData = new Dictionary<string, string>();
         // Debug.Log(DataUtility.GetTable().TbTest.DataList.Count);
@@ -74,8 +72,8 @@ public class ConfigSystem : AbstractSystem
 
     public async UniTask<Sprite> GetPropSprite(int id)
     {
-        ItemEntity data= ItemConfig.Find(v => v.Id == id);
-        var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(data.iconPath);
+        var data = GetTable().TbItemConfig.Get(id);
+        var obj = await this.GetSystem<IAddressableSystem>().LoadAssetAsync<Sprite>(data.IconPath);
         if (obj.Status == AsyncOperationStatus.Succeeded)
         {
             return obj.Result;    
